@@ -1,32 +1,20 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 const slides = [
-  {
-    id: 1,
-    bg: "bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900",
-    photoLabel: "【写真】北海道の冬景色・雪原の風景",
-    showMain: true,
-  },
-  {
-    id: 2,
-    bg: "bg-gradient-to-br from-sky-900 via-slate-800 to-navy-900",
-    photoLabel: "【写真】札幌市内・施設外観",
-    showMain: false,
-  },
-  {
-    id: 3,
-    bg: "bg-gradient-to-br from-stone-700 via-stone-800 to-stone-900",
-    photoLabel: "【写真】施設内観・居室",
-    showMain: false,
-  },
-  {
-    id: 4,
-    bg: "bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900",
-    photoLabel: "【写真】旭川・北海道の自然風景",
-    showMain: false,
-  },
+  { id: 1, src: "/images/slider/toppage-slider1.jpg", showMain: true },
+  { id: 2, src: "/images/slider/toppage-slider2.jpg", showMain: false },
+  { id: 3, src: "/images/slider/toppage-slider3.jpg", showMain: false },
+  { id: 4, src: "/images/slider/toppage-slider4.jpg", showMain: false },
+  { id: 5, src: "/images/slider/toppage-slider5.jpg", showMain: false },
+  { id: 6, src: "/images/slider/toppage-slider6.jpg", showMain: false },
+  { id: 7, src: "/images/slider/toppage-slider7.jpg", showMain: false },
+  { id: 8, src: "/images/slider/toppage-slider8.jpg", showMain: false },
+  { id: 9, src: "/images/slider/toppage-slider9.jpg", showMain: false },
+  { id: 10, src: "/images/slider/toppage-slider10.jpg", showMain: false },
+  { id: 11, src: "/images/slider/toppage-slider11.jpg", showMain: false },
 ];
 
 export default function HeroSlider() {
@@ -61,19 +49,22 @@ export default function HeroSlider() {
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-700 ${
             i === current ? "opacity-100" : "opacity-0"
-          } ${slide.bg}`}
+          }`}
         >
-          {/* Photo placeholder label */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
-            <span className="bg-black/40 text-white/60 text-xs px-3 py-1.5 rounded font-sans tracking-wide">
-              {slide.photoLabel}
-            </span>
-          </div>
+          {/* Real photo */}
+          <Image
+            src={slide.src}
+            alt={`COZY STAY北海道 スライド ${slide.id}`}
+            fill
+            className="object-cover"
+            priority={i === 0}
+            sizes="100vw"
+          />
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
 
-          {/* Main Message (first slide) */}
+          {/* Main Message (first slide only) */}
           {slide.showMain && (
             <div className="absolute inset-0 flex items-center justify-center px-6">
               <div className="text-center max-w-2xl">
