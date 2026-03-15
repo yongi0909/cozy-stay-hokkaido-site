@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navItems = [
@@ -43,18 +44,27 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex flex-col gap-0 leading-none group">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14">
+                <Image
+                  src="/images/company-logo.png"
+                  alt="COZY STAY北海道株式会社 ロゴ"
+                  fill
+                  className="object-contain"
+                  style={{ background: "transparent" }}
+                  priority
+                  unoptimized
+                />
+              </div>
               <span
-                style={{ fontFamily: "var(--font-serif)", letterSpacing: "0.2em" }}
-                className="text-navy-800 text-[10px] uppercase font-medium tracking-widest"
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  letterSpacing: "0.07em",
+                  fontFeatureSettings: "'palt'",
+                }}
+                className="text-navy-800 text-lg sm:text-xl font-semibold leading-snug"
               >
-                COZY STAY
-              </span>
-              <span
-                style={{ fontFamily: "var(--font-serif)" }}
-                className="text-navy-800 text-base font-semibold tracking-wide"
-              >
-                北海道株式会社
+                COZY STAY北海道株式会社
               </span>
             </Link>
 

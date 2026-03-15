@@ -48,43 +48,24 @@ export default function HomePage() {
           <p className="text-gold-400 text-xs tracking-[0.4em] uppercase font-sans text-center mb-10">
             OPERATIONAL ACHIEVEMENTS
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* KPI numbers */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-0 divide-y sm:divide-y-0 sm:divide-x lg:divide-x-0 lg:divide-y divide-white/10">
-              {kpis.map((kpi) => (
-                <div key={kpi.label} className="py-7 sm:py-5 lg:py-6 px-4 lg:px-2 text-center sm:text-center lg:text-left flex flex-col sm:items-center lg:items-start">
-                  <div className="flex items-end justify-center lg:justify-start gap-1">
-                    <span
-                      style={{ fontFamily: "var(--font-serif)" }}
-                      className="text-white text-4xl lg:text-5xl font-semibold tracking-tight"
-                    >
-                      {kpi.value}
-                    </span>
-                    <span className="text-white/70 text-lg font-sans pb-1">{kpi.unit}</span>
-                  </div>
-                  <p className="text-gold-400 text-sm font-medium mt-2 mb-1 font-sans tracking-wide">
-                    {kpi.label}
-                  </p>
-                  <p className="text-white/40 text-xs font-sans">{kpi.note}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {kpis.map((kpi) => (
+              <div key={kpi.label} className="py-8 sm:py-6 px-6 text-center">
+                <div className="flex items-end justify-center gap-1">
+                  <span
+                    style={{ fontFamily: "var(--font-serif)" }}
+                    className="text-white text-4xl lg:text-5xl font-semibold tracking-tight"
+                  >
+                    {kpi.value}
+                  </span>
+                  <span className="text-white/70 text-lg font-sans pb-1">{kpi.unit}</span>
                 </div>
-              ))}
-            </div>
-
-            {/* Review score screenshot */}
-            <div className="relative w-full max-w-sm mx-auto lg:max-w-none">
-              <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-white/10">
-                <Image
-                  src="/images/review score.png"
-                  alt="Airbnb レビュースコア実績"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+                <p className="text-gold-400 text-sm font-medium mt-2 mb-1 font-sans tracking-wide">
+                  {kpi.label}
+                </p>
+                <p className="text-white/40 text-xs font-sans">{kpi.note}</p>
               </div>
-              <p className="text-white/30 text-xs font-sans text-center mt-2">
-                Airbnb 実際のレビュースコア（スクリーンショット）
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

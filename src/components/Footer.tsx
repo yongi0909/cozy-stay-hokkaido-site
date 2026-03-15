@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "ホーム" },
@@ -14,20 +15,30 @@ export default function Footer() {
     <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
           {/* Brand */}
           <div>
-            <p
-              style={{ fontFamily: "var(--font-serif)", letterSpacing: "0.18em" }}
-              className="text-xs uppercase text-gold-400 mb-1"
-            >
-              COZY STAY
-            </p>
-            <p
-              style={{ fontFamily: "var(--font-serif)" }}
-              className="text-xl font-semibold text-white mb-4"
-            >
-              北海道株式会社
-            </p>
+            <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/images/company-logo.png"
+                  alt="COZY STAY北海道株式会社 ロゴ"
+                  fill
+                  className="object-contain"
+                  unoptimized
+                />
+              </div>
+              <span
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  letterSpacing: "0.06em",
+                  fontFeatureSettings: "'palt'",
+                }}
+                className="text-white text-base font-semibold leading-snug"
+              >
+                COZY STAY北海道株式会社
+              </span>
+            </Link>
             <p className="text-sm text-white/60 leading-relaxed">
               北海道において、旅人が「また来たい」と思える
               <br />
@@ -89,6 +100,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
           <p>© {new Date().getFullYear()} COZY STAY北海道株式会社. All rights reserved.</p>
           <p>Sapporo / Asahikawa, Hokkaido, Japan</p>
