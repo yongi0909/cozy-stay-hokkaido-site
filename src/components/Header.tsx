@@ -47,7 +47,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14">
                 <Image
-                  src="/images/company-logo.png"
+                  src="/images/company-logo1.jpg"
                   alt="COZY STAY北海道株式会社 ロゴ"
                   fill
                   className="object-contain"
