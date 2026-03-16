@@ -27,7 +27,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           {property.description}
         </p>
         <a
-          href={property.bookingUrl}
+          href={property.detailUrl ?? property.bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-xs font-medium tracking-wider text-navy-700 border border-navy-600 px-4 py-2 hover:bg-navy-800 hover:text-white hover:border-navy-800 transition-all duration-200 font-sans"

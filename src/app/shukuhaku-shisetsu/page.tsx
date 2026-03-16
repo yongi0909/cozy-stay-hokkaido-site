@@ -1,6 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import SectionTitle from "@/components/SectionTitle";
 import PropertyCard from "@/components/PropertyCard";
+import PropertyCardWithSlider from "@/components/PropertyCardWithSlider";
 import { properties } from "@/data/properties";
 
 export default function ShukuhakuShisetsuPage() {
@@ -60,13 +61,17 @@ export default function ShukuhakuShisetsuPage() {
             <SectionTitle
               label="SAPPORO"
               title="札幌エリア"
-              description={`札幌市内に${sapporoProps.length}室を展開。中島公園・中央区・本郷通・東区・円山エリアにわたります。`}
+              description="札幌市内に23室を展開。中島公園・白石区本郷通り・東区・円山エリアにわたります。"
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {sapporoProps.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
+            {sapporoProps.map((property) =>
+              property.photos ? (
+                <PropertyCardWithSlider key={property.id} property={property} />
+              ) : (
+                <PropertyCard key={property.id} property={property} />
+              )
+            )}
           </div>
         </div>
       </section>
@@ -78,13 +83,17 @@ export default function ShukuhakuShisetsuPage() {
             <SectionTitle
               label="ASAHIKAWA"
               title="旭川エリア"
-              description={`旭川市内・比布町に${asahikawaProps.length}室を展開。大雪山系を望む自然豊かな環境の施設です。`}
+              description="旭川市内及び近郊に3室を展開。大雪山系を望む自然豊かな環境の施設です。"
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {asahikawaProps.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
+            {asahikawaProps.map((property) =>
+              property.photos ? (
+                <PropertyCardWithSlider key={property.id} property={property} />
+              ) : (
+                <PropertyCard key={property.id} property={property} />
+              )
+            )}
           </div>
         </div>
       </section>

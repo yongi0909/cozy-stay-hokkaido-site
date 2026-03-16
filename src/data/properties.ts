@@ -5,6 +5,10 @@ export interface Property {
   areaLabel: string;
   description: string;
   bookingUrl: string;
+  /** Optional: real photos for slider. If absent, shows placeholder. */
+  photos?: string[];
+  /** Optional: override booking URL shown on the detail card */
+  detailUrl?: string;
 }
 
 export const properties: Property[] = [
@@ -15,7 +19,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "中島公園そばの静かな住宅街に位置する1LDKのゆとりある空間です。",
-    bookingUrl: "https://airbnb.jp/h/cn301",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/301",
+    photos: [
+      "/images/rooms/cn301/CN301-01.jpg",
+      "/images/rooms/cn301/CN301-02.jpg",
+      "/images/rooms/cn301/CN301-03.jpg",
+      "/images/rooms/cn301/CN301-04.jpg",
+      "/images/rooms/cn301/CN301-05.jpg",
+    ],
   },
   {
     id: "cssc701",
@@ -23,7 +34,13 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "7階に位置し、開放感のある眺望を備えた快適な滞在空間です。",
-    bookingUrl: "https://airbnb.jp/h/cssc701",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/701",
+    photos: [
+      "/images/rooms/cssc701/CN701-01.jpg",
+      "/images/rooms/cssc701/CN701-02.jpg",
+      "/images/rooms/cssc701/CN701-03.jpg",
+      "/images/rooms/cssc701/CN701-05.jpg",
+    ],
   },
   {
     id: "cssc801",
@@ -31,7 +48,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "落ち着いたインテリアと機能的な設備を兼ね備えたお部屋です。",
-    bookingUrl: "https://airbnb.jp/h/cssc801",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/801",
+    photos: [
+      "/images/rooms/cssc801/CN801-01.jpg",
+      "/images/rooms/cssc801/CN801-02.jpg",
+      "/images/rooms/cssc801/CN801-03.jpg",
+      "/images/rooms/cssc801/CN801-04.jpg",
+      "/images/rooms/cssc801/CN801-05.jpg",
+    ],
   },
   {
     id: "cssc805",
@@ -39,7 +63,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "清潔感ある空間で、長期滞在にも対応した設備を整えています。",
-    bookingUrl: "https://airbnb.jp/h/cssc805",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/805",
+    photos: [
+      "/images/rooms/cssc805/CN805-01.jpg",
+      "/images/rooms/cssc805/CN805-02.jpg",
+      "/images/rooms/cssc805/CN805-03.jpg",
+      "/images/rooms/cssc805/CN805-04.jpg",
+      "/images/rooms/cssc805/CN805-05.jpg",
+    ],
   },
   {
     id: "cn906",
@@ -48,6 +79,13 @@ export const properties: Property[] = [
     areaLabel: "札幌・中島公園",
     description: "自然光が心地よく差し込む上層階の快適な滞在スペースです。",
     bookingUrl: "https://airbnb.jp/h/cn906",
+    photos: [
+      "/images/rooms/cn906/CN906-01.jpg",
+      "/images/rooms/cn906/CN906-02.jpg",
+      "/images/rooms/cn906/CN906-03.jpg",
+      "/images/rooms/cn906/CN906-04.jpg",
+      "/images/rooms/cn906/CN906-05.jpg",
+    ],
   },
   {
     id: "cssc-shogun",
@@ -55,7 +93,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "13階からの眺望と落ち着いた内装が調和する特別な空間です。",
-    bookingUrl: "https://airbnb.jp/h/cssc-shogun",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1302",
+    photos: [
+      "/images/rooms/cssc-shogun/CN1302-01.jpg",
+      "/images/rooms/cssc-shogun/CN1302-02.jpg",
+      "/images/rooms/cssc-shogun/CN1302-03.jpg",
+      "/images/rooms/cssc-shogun/CN1302-04.jpg",
+      "/images/rooms/cssc-shogun/CN1302-05.jpg",
+    ],
   },
   {
     id: "cssc1305",
@@ -63,7 +108,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "高層階ならではの開放感と洗練されたインテリアをお楽しみいただけます。",
-    bookingUrl: "https://airbnb.jp/h/cssc1305",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1305",
+    photos: [
+      "/images/rooms/cssc1305/CN1305-01.jpg",
+      "/images/rooms/cssc1305/CN1305-02.jpg",
+      "/images/rooms/cssc1305/CN1305-03.jpg",
+      "/images/rooms/cssc1305/CN1305-04.jpg",
+      "/images/rooms/cssc1305/CN1305-05.jpg",
+    ],
   },
   {
     id: "cssc1504",
@@ -71,7 +123,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "15階の角部屋で、札幌市街を一望できる贅沢な滞在を。",
-    bookingUrl: "https://airbnb.jp/h/cssc1504",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1504",
+    photos: [
+      "/images/rooms/cssc1504/CN1504-01.jpg",
+      "/images/rooms/cssc1504/CN1504-02.jpg",
+      "/images/rooms/cssc1504/CN1504-03.jpg",
+      "/images/rooms/cssc1504/CN1504-04.jpg",
+      "/images/rooms/cssc1504/CN1504-05.jpg",
+    ],
   },
   {
     id: "cssc1704",
@@ -79,7 +138,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "上層階の静かな環境で、洗練されたプライベート空間をご提供します。",
-    bookingUrl: "https://airbnb.jp/h/cozy-stay-sapporo-central1704",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1704",
+    photos: [
+      "/images/rooms/cssc1704/CN1704-01.jpg",
+      "/images/rooms/cssc1704/CN1704-02.jpg",
+      "/images/rooms/cssc1704/CN1704-03.jpg",
+      "/images/rooms/cssc1704/CN1704-04.jpg",
+      "/images/rooms/cssc1704/CN1704-05.jpg",
+    ],
   },
   {
     id: "cssc1706",
@@ -87,57 +153,106 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "17階の高みから札幌の街並みを一望する、特別感ある滞在スペースです。",
-    bookingUrl: "https://airbnb.jp/h/cssc1706",
+    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1706",
+    photos: [
+      "/images/rooms/cssc1706/CN1706-01.jpg",
+      "/images/rooms/cssc1706/CN1706-02.jpg",
+      "/images/rooms/cssc1706/CN1706-03.jpg",
+      "/images/rooms/cssc1706/CN1706-04.jpg",
+      "/images/rooms/cssc1706/CN1706-05.jpg",
+    ],
   },
   // ── 札幌 ─ Central ──
   {
     id: "cssc404",
     name: "Cozy Stay Sapporo Central 404",
     area: "sapporo",
-    areaLabel: "札幌・中央区",
+    areaLabel: "札幌・中島公園",
     description: "市中心部へのアクセス良好な利便性の高いお部屋です。",
-    bookingUrl: "https://airbnb.jp/h/cssc404",
+    bookingUrl: "https://wfvacations.jp/hokkaido/central/404",
+    photos: [
+      "/images/rooms/cssc404/C404-01.jpg",
+      "/images/rooms/cssc404/C404-02.jpg",
+      "/images/rooms/cssc404/C404-03.jpg",
+      "/images/rooms/cssc404/C404-04.jpg",
+      "/images/rooms/cssc404/C404-05.jpg",
+    ],
   },
   {
     id: "nc502",
     name: "Cozy Stay Sapporo Central 502",
     area: "sapporo",
-    areaLabel: "札幌・中央区",
+    areaLabel: "札幌・中島公園",
     description: "清潔感あふれる空間で、ビジネスにも観光にも最適です。",
-    bookingUrl: "https://airbnb.jp/h/nc502",
+    bookingUrl: "https://wfvacations.jp/hokkaido/central/502",
+    photos: [
+      "/images/rooms/nc502/C502-01.jpg",
+      "/images/rooms/nc502/C502-02.jpg",
+      "/images/rooms/nc502/C502-03.jpg",
+      "/images/rooms/nc502/C502-04.jpg",
+      "/images/rooms/nc502/C502-05.jpg",
+    ],
   },
   {
     id: "cssc1801",
     name: "Cozy Stay Sapporo Central 1801",
     area: "sapporo",
-    areaLabel: "札幌・中央区",
+    areaLabel: "札幌・中島公園",
     description: "18階の高層からは市街地を見渡す絶景が広がります。",
-    bookingUrl: "https://airbnb.jp/h/cssc1801",
+    bookingUrl: "https://wfvacations.jp/hokkaido/central/1801",
+    photos: [
+      "/images/rooms/cssc1801/C1801-01.jpg",
+      "/images/rooms/cssc1801/C1801-02.jpg",
+      "/images/rooms/cssc1801/C1801-03.jpg",
+      "/images/rooms/cssc1801/C1801-04.jpg",
+      "/images/rooms/cssc1801/C1801-05.jpg",
+    ],
   },
   // ── 札幌 ─ Hongodori ──
   {
     id: "hongodori405",
     name: "Cozy Stay Sapporo Hongodori 405",
     area: "sapporo",
-    areaLabel: "札幌・本郷通",
+    areaLabel: "札幌・白石区",
     description: "本郷通沿いの落ち着いたエリアに位置する快適なお部屋です。",
-    bookingUrl: "https://airbnb.jp/h/hongodori405",
+    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/405",
+    photos: [
+      "/images/rooms/hongodori405/H405-01.jpg",
+      "/images/rooms/hongodori405/H405-02.jpg",
+      "/images/rooms/hongodori405/H405-03.jpg",
+      "/images/rooms/hongodori405/H405-04.jpg",
+      "/images/rooms/hongodori405/H405-05.jpg",
+    ],
   },
   {
     id: "hongodori605",
     name: "Cozy Stay Sapporo Hongodori 605",
     area: "sapporo",
-    areaLabel: "札幌・本郷通",
+    areaLabel: "札幌・白石区",
     description: "6階からの開放的な眺望と機能的な間取りが魅力のお部屋です。",
-    bookingUrl: "https://airbnb.jp/h/hongodori605",
+    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/605",
+    photos: [
+      "/images/rooms/hongodori605/H605-01.jpg",
+      "/images/rooms/hongodori605/H605-02.jpg",
+      "/images/rooms/hongodori605/H605-03.jpg",
+      "/images/rooms/hongodori605/H605-04.jpg",
+      "/images/rooms/hongodori605/H605-05.jpg",
+    ],
   },
   {
     id: "hongodori1005",
     name: "Cozy Stay Sapporo Hongodori 1005",
     area: "sapporo",
-    areaLabel: "札幌・本郷通",
+    areaLabel: "札幌・白石区",
     description: "上層階ならではの静けさと眺望が楽しめる上質な滞在空間。",
-    bookingUrl: "https://airbnb.jp/h/hongodori1005",
+    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/1005",
+    photos: [
+      "/images/rooms/hongodori1005/H1005-01.jpg",
+      "/images/rooms/hongodori1005/H1005-02.jpg",
+      "/images/rooms/hongodori1005/H1005-03.jpg",
+      "/images/rooms/hongodori1005/H1005-04.jpg",
+      "/images/rooms/hongodori1005/H1005-05.jpg",
+    ],
   },
   // ── 札幌 ─ East ──
   {
@@ -146,7 +261,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "落ち着いた住宅街に溶け込む、ゆとりある生活空間です。",
-    bookingUrl: "https://airbnb.jp/h/csse-a",
+    bookingUrl: "https://wfvacations.jp/hokkaido/east/302",
+    photos: [
+      "/images/rooms/csse-a/E302-01.jpg",
+      "/images/rooms/csse-a/E302-02.jpg",
+      "/images/rooms/csse-a/E302-03.jpg",
+      "/images/rooms/csse-a/E302-04.jpg",
+      "/images/rooms/csse-a/E302-05.jpg",
+    ],
   },
   {
     id: "csse-b",
@@ -154,7 +276,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "隣室とセットでの大人数対応も可能な、柔軟な滞在プランに対応します。",
-    bookingUrl: "https://airbnb.jp/h/csse-b",
+    bookingUrl: "https://wfvacations.jp/hokkaido/east/303",
+    photos: [
+      "/images/rooms/csse-b/E303-01.jpg",
+      "/images/rooms/csse-b/E303-02.jpg",
+      "/images/rooms/csse-b/E303-03.jpg",
+      "/images/rooms/csse-b/E303-04.jpg",
+      "/images/rooms/csse-b/E303-05.jpg",
+    ],
   },
   {
     id: "csse-d",
@@ -162,7 +291,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "日当たり良好な4階のお部屋。長期滞在でも快適にお過ごしいただけます。",
-    bookingUrl: "https://airbnb.jp/h/csse-d",
+    bookingUrl: "https://wfvacations.jp/hokkaido/east/405",
+    photos: [
+      "/images/rooms/csse-d/E405-01.jpg",
+      "/images/rooms/csse-d/E405-02.jpg",
+      "/images/rooms/csse-d/E405-03.jpg",
+      "/images/rooms/csse-d/E303-04.jpg",
+      "/images/rooms/csse-d/E405-05.jpg",
+    ],
   },
   {
     id: "csse-c",
@@ -170,7 +306,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "コンパクトながらも必要な設備が揃ったスマートな滞在空間です。",
-    bookingUrl: "https://airbnb.jp/h/csse-c",
+    bookingUrl: "https://wfvacations.jp/hokkaido/east/305",
+    photos: [
+      "/images/rooms/csse-c/E305-01.jpg",
+      "/images/rooms/csse-c/E305-02.jpg",
+      "/images/rooms/csse-c/E305-03.jpg",
+      "/images/rooms/csse-c/E305-04.jpg",
+      "/images/rooms/csse-c/E305-05.jpg",
+    ],
   },
   // ── 札幌 ─ Maruyama ──
   {
@@ -179,7 +322,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "円山エリアの9階から望む緑豊かな眺望が心を癒す特別な空間です。",
-    bookingUrl: "https://airbnb.jp/h/m901",
+    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/901",
+    photos: [
+      "/images/rooms/m901/M901-01.jpg",
+      "/images/rooms/m901/M901-02.jpg",
+      "/images/rooms/m901/M901-03.jpg",
+      "/images/rooms/m901/M901-04.jpg",
+      "/images/rooms/m901/M901-05.jpg",
+    ],
   },
   {
     id: "cssm601",
@@ -187,7 +337,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "北海道神宮に近い閑静な円山エリア。上質な滞在をご提供します。",
-    bookingUrl: "https://airbnb.jp/h/cssm601",
+    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/601",
+    photos: [
+      "/images/rooms/cssm601/M601-01.jpg",
+      "/images/rooms/cssm601/M601-02.jpg",
+      "/images/rooms/cssm601/M601-03.jpg",
+      "/images/rooms/cssm601/M601-04.jpg",
+      "/images/rooms/cssm601/M601-05.jpg",
+    ],
   },
   {
     id: "cssm202",
@@ -195,7 +352,14 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "IBIZAスタイルのデザインが際立つ、個性的でスタイリッシュな空間です。",
-    bookingUrl: "https://airbnb.jp/h/cssm202",
+    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/ibiza/202",
+    photos: [
+      "/images/rooms/cssm202/M202-01.jpg",
+      "/images/rooms/cssm202/M202-02.jpg",
+      "/images/rooms/cssm202/M202-03.jpg",
+      "/images/rooms/cssm202/M202-04.jpg",
+      "/images/rooms/cssm202/M202-05.jpg",
+    ],
   },
   // ── 旭川 ──
   {
@@ -204,22 +368,43 @@ export const properties: Property[] = [
     area: "asahikawa",
     areaLabel: "旭川",
     description: "旭川市内の好立地に位置する、快適で温かみのある宿泊施設です。",
-    bookingUrl: "https://airbnb.jp/h/cozystayasahikawa",
+    bookingUrl: "https://wfvacations.jp/hokkaido/asahikawa/0",
+    photos: [
+      "/images/rooms/cozystayasahikawa/CSA-01.jpg",
+      "/images/rooms/cozystayasahikawa/CSA-02.jpg",
+      "/images/rooms/cozystayasahikawa/CSA-03.jpg",
+      "/images/rooms/cozystayasahikawa/CSA-04.jpg",
+      "/images/rooms/cozystayasahikawa/CSA-05.jpg",
+    ],
   },
   {
     id: "kamui",
     name: "Cozy Stay Kamui",
     area: "asahikawa",
-    areaLabel: "旭川・神居",
+    areaLabel: "旭川",
     description: "旭川郊外の自然豊かなエリアに位置する、落ち着いた空間です。",
     bookingUrl: "https://airbnb.jp/h/kamui",
+    photos: [
+      "/images/rooms/kamui/CSK-01.jpg",
+      "/images/rooms/kamui/CSK-02.jpg",
+      "/images/rooms/kamui/CSK-03.jpg",
+      "/images/rooms/kamui/CSK-04.jpg",
+      "/images/rooms/kamui/CSK-05.png",
+    ],
   },
   {
     id: "pippu",
     name: "Cozy Stay Pippu",
     area: "asahikawa",
-    areaLabel: "比布町",
+    areaLabel: "旭川",
     description: "大雪山系を望む比布町の静かな環境で、北海道の自然を満喫できます。",
     bookingUrl: "https://airbnb.jp/h/pippu",
+    photos: [
+      "/images/rooms/pippu/CSP-01.jpg",
+      "/images/rooms/pippu/CSP-02.jpg",
+      "/images/rooms/pippu/CSP-03.jpg",
+      "/images/rooms/pippu/CSP-04.jpg",
+      "/images/rooms/pippu/CSP-05.jpg",
+    ],
   },
 ];
