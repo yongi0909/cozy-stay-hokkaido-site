@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  src="/images/company-logo2.png"
+                  src="/images/company-logo1.jpg"
                   alt="COZY STAY北海道株式会社 ロゴ"
                   fill
                   className="object-contain"
