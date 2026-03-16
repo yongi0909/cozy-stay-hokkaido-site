@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Brand */}
-          <div>
+          <div className="max-w-xs">
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image

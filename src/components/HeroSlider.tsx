@@ -70,7 +70,7 @@ export default function HeroSlider() {
       {/* ── Fixed text (never moves or disappears) ── */}
       <div className="absolute inset-0 flex items-center justify-center px-6 pointer-events-none">
         <div className="text-center max-w-2xl w-full">
-          <p className="text-gold-400 text-xs tracking-[0.4em] uppercase mb-6 font-sans">
+          <p className="text-gold-400 text-sm sm:text-base tracking-[0.4em] uppercase mb-6 font-sans">
             COZY STAY HOKKAIDO
           </p>
           <h1
