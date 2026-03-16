@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  src="/images/company-logo1.jpg"
+                  src="/images/company-logo2.png"
                   alt="COZY STAY北海道株式会社 ロゴ"
                   fill
                   className="object-contain"
@@ -40,9 +40,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              旅人が「また来たい」と思える
+              旅人が「また来たい」と思える宿泊空間を
               <br />
-              宿泊空間を運営・提供しています。
+              北海道で運営・提供しています。
             </p>
           </div>
 

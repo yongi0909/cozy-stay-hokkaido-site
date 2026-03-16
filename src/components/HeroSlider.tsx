@@ -78,13 +78,10 @@ export default function HeroSlider() {
             className="text-white font-normal leading-relaxed drop-shadow-md mb-8"
           >
             <span className="block text-xl sm:text-2xl lg:text-3xl">
-              ここは北海道にある
+              北海道で、
             </span>
             <span className="block text-xl sm:text-2xl lg:text-3xl mt-2">
-              あなたが帰ってきたくなる家
-            </span>
-            <span className="block text-xl sm:text-2xl lg:text-3xl mt-2">
-              私たちはそんな旅の宿を目指しています。
+              あなたがまた帰ってきたくなる宿を。
             </span>
           </h1>
           <div className="flex items-center justify-center pointer-events-auto">
