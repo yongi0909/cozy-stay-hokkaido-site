@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
+import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function OtoiawasePage() {
   const [formState, setFormState] = useState<FormState>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     company: "",
     name: "",
@@ -26,19 +28,58 @@ export default function OtoiawasePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("submitting");
-    // TODO: Connect to backend / email service
-    // Simulating submission
-    await new Promise((r) => setTimeout(r, 1000));
-    setFormState("success");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        setErrorMessage(json.error ?? "送信に失敗しました。");
+        setFormState("error");
+      } else {
+        setFormState("success");
+      }
+    } catch {
+      setErrorMessage("通信エラーが発生しました。時間をおいて再度お試しください。");
+      setFormState("error");
+    }
   };
 
   return (
     <>
-      <PageHeader
-        label="CONTACT"
-        title="お問い合わせ"
-        description="金融機関・取引先・事業パートナーの方からのお問い合わせをお受けしています。"
-      />
+      {/* ── Photo Page Header ── */}
+      <div className="relative w-full h-52 sm:h-64 lg:h-80 overflow-hidden">
+        <Image
+          src="/images/contact-top.jpg"
+          alt="お問い合わせ"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy-900/55" />
+        <div className="absolute inset-0 flex items-center px-5 sm:px-8 lg:px-10">
+          <div className="max-w-7xl w-full mx-auto">
+            <p className="text-gold-400 text-xs tracking-[0.35em] uppercase font-sans mb-3">
+              CONTACT
+            </p>
+            <h1
+              style={{ fontFamily: "var(--font-serif)" }}
+              className="text-white text-3xl lg:text-4xl font-semibold tracking-wide"
+            >
+              お問い合わせ
+            </h1>
+            <p className="mt-4 text-white/80 text-sm leading-relaxed max-w-xl font-sans">
+              取引先・事業パートナーの方からのお問い合わせをお受けしています。
+            </p>
+            <div className="mt-5 w-12 h-px bg-gold-400" />
+          </div>
+        </div>
+      </div>
 
       <section className="bg-white py-20 px-5 sm:px-8 lg:px-10">
         <div className="max-w-5xl mx-auto">
@@ -165,7 +206,7 @@ export default function OtoiawasePage() {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-gray-800 font-sans focus:outline-none focus:border-navy-400 focus:bg-white transition-colors"
-                        placeholder="株式会社〇〇　/ 〇〇銀行"
+                        placeholder="株式会社〇〇"
                       />
                     </div>
                     {/* Name */}
@@ -224,7 +265,6 @@ export default function OtoiawasePage() {
                         className="w-full border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-gray-800 font-sans focus:outline-none focus:border-navy-400 focus:bg-white transition-colors"
                       >
                         <option value="">選択してください</option>
-                        <option value="financial">金融機関・融資に関するお問い合わせ</option>
                         <option value="partner">事業提携・パートナーシップ</option>
                         <option value="property">物件・施設に関するお問い合わせ</option>
                         <option value="media">取材・メディア</option>
@@ -248,10 +288,25 @@ export default function OtoiawasePage() {
                     </div>
                   </div>
 
+                  {/* Error message */}
+                  {formState === "error" && (
+                    <p className="text-red-500 text-sm font-sans bg-red-50 border border-red-200 px-4 py-3">
+                      {errorMessage}
+                    </p>
+                  )}
+
+                  {/* Privacy checkbox */}
                   <div className="flex items-start gap-3">
                     <input type="checkbox" id="privacy" required className="mt-0.5 accent-navy-800" />
                     <label htmlFor="privacy" className="text-xs text-gray-500 font-sans leading-relaxed">
-                      個人情報の取り扱いについて同意の上、送信します。
+                      <Link
+                        href="/privacy-policy"
+                        target="_blank"
+                        className="text-navy-600 underline underline-offset-2 hover:text-navy-800 transition-colors"
+                      >
+                        個人情報の取り扱い
+                      </Link>
+                      について同意の上、送信します。
                       お問い合わせいただいた個人情報は、ご連絡の目的以外には使用いたしません。
                     </label>
                   </div>
