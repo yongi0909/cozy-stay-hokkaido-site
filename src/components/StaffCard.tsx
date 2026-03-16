@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
+
 interface StaffCardProps {
   name: string;
   nameReading?: string;   // furigana
   role: string;
-  bio?: string;
+  bio?: ReactNode;
   hasPhoto?: boolean;
   photoSrc?: string;       // path to real photo when available
   isRepresentative?: boolean;
@@ -66,7 +68,7 @@ export default function StaffCard({
         </h3>
         <p className="text-gold-600 text-sm font-medium mt-1 mb-4 font-sans">{role}</p>
         {bio && (
-          <p className="text-gray-500 text-sm leading-relaxed font-sans">{bio}</p>
+          <div className="text-gray-500 text-sm leading-relaxed font-sans space-y-3">{bio}</div>
         )}
       </div>
     </div>
