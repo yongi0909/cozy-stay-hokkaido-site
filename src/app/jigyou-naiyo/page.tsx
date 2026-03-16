@@ -1,4 +1,4 @@
-import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
 import SectionTitle from "@/components/SectionTitle";
 
 const services = [
@@ -62,11 +62,35 @@ const services = [
 export default function JigyouNaiyoPage() {
   return (
     <>
-      <PageHeader
-        label="BUSINESS"
-        title="事業内容"
-        description="COZY STAY北海道株式会社が北海道で展開する宿泊事業の概要と、具体的なサービス内容をご説明します。"
-      />
+      {/* ── Photo Page Header ── */}
+      <div className="relative w-full h-52 sm:h-64 lg:h-80 overflow-hidden">
+        <Image
+          src="/images/business/main-visual3.jpg"
+          alt="事業内容"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy-900/50" />
+        <div className="absolute inset-0 flex items-center px-5 sm:px-8 lg:px-10">
+          <div className="max-w-7xl w-full mx-auto">
+            <p className="text-gold-400 text-xs tracking-[0.35em] uppercase font-sans mb-3">
+              BUSINESS
+            </p>
+            <h1
+              style={{ fontFamily: "var(--font-serif)" }}
+              className="text-white text-3xl lg:text-4xl font-semibold tracking-wide"
+            >
+              事業内容
+            </h1>
+            <p className="mt-4 text-white/90 text-sm font-semibold leading-relaxed max-w-xl font-sans">
+              COZY STAY北海道株式会社が北海道で展開する宿泊事業の概要と、具体的なサービス内容をご説明します。
+            </p>
+            <div className="mt-5 w-12 h-px bg-gold-400" />
+          </div>
+        </div>
+      </div>
 
       {/* Overview */}
       <section className="bg-white py-20 px-5 sm:px-8 lg:px-10">
@@ -84,17 +108,22 @@ export default function JigyouNaiyoPage() {
                 各施設の日常運営にとどまらず、予約管理・ゲストサポート・清掃手配・施設メンテナンスまでを一貫して自社で担うことで、安定した運営品質を維持しています。
               </p>
               <p>
-                Airbnbにおいて1,300件以上のレビューと平均評価4.98という実績が示すとおり、高い顧客満足度を継続的に実現しています。これは、地域に密着したスタッフが誠実・丁寧に業務を遂行してきた結果です。
+                Airbnbにおいて<strong className="text-navy-800 font-semibold">レビュー1,300件以上</strong>・平均評価<strong className="text-navy-800 font-semibold">スコア4.98</strong>という実績が示すとおり、高い顧客満足度を継続的に実現しています。これは、地域に密着したスタッフが誠実・丁寧に業務を遂行してきた結果です。
               </p>
             </div>
-            {/* Photo placeholder */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-slate-600 to-slate-800 flex items-end p-4">
-                <span className="text-white/25 text-xs font-sans">
-                  【写真】施設内観・運営のイメージ
-                </span>
+
+            {/* Airbnb review screenshot */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative border border-cream-200 shadow-sm overflow-hidden bg-white w-full max-w-xs">
+                <Image
+                  src="/images/business/overview.png"
+                  alt="Airbnb レビュー実績スクリーンショット"
+                  width={320}
+                  height={448}
+                  className="w-full h-auto object-contain"
+                  sizes="(max-width: 1024px) 80vw, 320px"
+                />
               </div>
-              <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold-400 -z-10" />
             </div>
           </div>
         </div>
@@ -135,8 +164,14 @@ export default function JigyouNaiyoPage() {
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Sapporo */}
             <div className="border border-cream-200 overflow-hidden">
-              <div className="h-40 bg-gradient-to-br from-navy-700 to-navy-900 flex items-end p-4">
-                <span className="text-white/25 text-xs font-sans">【写真】札幌エリア</span>
+              <div className="relative h-40 overflow-hidden">
+                <Image
+                  src="/images/business/areas-sapporo.jpg"
+                  alt="札幌エリア"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
               <div className="p-6">
                 <p className="text-gold-500 text-xs tracking-widest uppercase font-sans mb-2">SAPPORO</p>
@@ -149,16 +184,22 @@ export default function JigyouNaiyoPage() {
                 <p className="text-gray-500 text-sm leading-relaxed font-sans mb-4">
                   中島公園・中央区・本郷通・東区・円山など、市内複数エリアにわたり23室を運営。地下鉄沿線の利便性の高い立地が中心です。
                 </p>
-                <div className="flex items-center gap-2 text-navy-700 text-sm font-medium font-sans">
-                  <span className="text-2xl font-serif text-navy-800">23</span>
+                <div className="flex items-baseline gap-2 font-sans">
+                  <span className="text-3xl font-serif text-navy-800">23</span>
                   <span className="text-gray-500 text-sm">室運営中</span>
                 </div>
               </div>
             </div>
             {/* Asahikawa */}
             <div className="border border-cream-200 overflow-hidden">
-              <div className="h-40 bg-gradient-to-br from-slate-600 to-slate-800 flex items-end p-4">
-                <span className="text-white/25 text-xs font-sans">【写真】旭川エリア</span>
+              <div className="relative h-40 overflow-hidden">
+                <Image
+                  src="/images/business/areas-asahikawa.jpg"
+                  alt="旭川エリア"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
               <div className="p-6">
                 <p className="text-gold-500 text-xs tracking-widest uppercase font-sans mb-2">ASAHIKAWA</p>
@@ -171,8 +212,8 @@ export default function JigyouNaiyoPage() {
                 <p className="text-gray-500 text-sm leading-relaxed font-sans mb-4">
                   旭川市内及び比布町において3室を運営。大雪山や旭山動物園など北海道観光の拠点として、多くのゲストに利用されています。
                 </p>
-                <div className="flex items-center gap-2 text-navy-700 text-sm font-medium font-sans">
-                  <span className="text-2xl font-serif text-navy-800">3</span>
+                <div className="flex items-baseline gap-2 font-sans">
+                  <span className="text-3xl font-serif text-navy-800">3</span>
                   <span className="text-gray-500 text-sm">室運営中</span>
                 </div>
               </div>
