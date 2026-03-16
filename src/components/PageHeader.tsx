@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
+
 interface PageHeaderProps {
   label: string;       // e.g. "COMPANY PROFILE"
   title: string;       // Japanese heading
-  description?: string;
+  description?: ReactNode;
 }
 
 export default function PageHeader({ label, title, description }: PageHeaderProps) {

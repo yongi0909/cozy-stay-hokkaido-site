@@ -13,7 +13,7 @@ export default function ShukuhakuShisetsuPage() {
       <PageHeader
         label="PROPERTIES"
         title="宿泊施設一覧"
-        description={`当社が北海道で運営する全${properties.length}室の宿泊施設をご紹介します。各施設のページより詳細・ご予約のご確認が可能です。`}
+        description={<>当社が北海道で運営する全{properties.length}室の宿泊施設をご紹介します。<br />各施設のページより詳細・ご予約のご確認が可能です。</>}
       />
 
       {/* Summary bar */}
