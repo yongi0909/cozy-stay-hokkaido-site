@@ -4,9 +4,9 @@ import HeroSlider from "@/components/HeroSlider";
 import SectionTitle from "@/components/SectionTitle";
 
 const kpis = [
-  { value: "30", unit: "室", label: "運営施設数", note: "札幌・旭川エリア" },
-  { value: "1,300", unit: "件以上", label: "Airbnbレビュー件数", note: "実績累計" },
-  { value: "4.98", unit: "/ 5.00", label: "Airbnb平均評価", note: "ゲスト総合評価" },
+  { value: "30", unit: "室", label: "運営施設数", note: "グループ合計", subnote: "（北海道26室含む）" },
+  { value: "1,300", unit: "件以上", label: "Airbnbレビュー件数", note: "実績累計", subnote: "" },
+  { value: "4.98", unit: "/ 5.00", label: "Airbnb平均評価", note: "ゲスト総合評価", subnote: "" },
 ];
 
 const sections = [
@@ -64,6 +64,9 @@ export default function HomePage() {
                   {kpi.label}
                 </p>
                 <p className="text-white/40 text-xs font-sans">{kpi.note}</p>
+                {kpi.subnote && (
+                  <p className="text-white/30 text-[11px] font-sans mt-0.5">{kpi.subnote}</p>
+                )}
               </div>
             ))}
           </div>
@@ -85,7 +88,7 @@ export default function HomePage() {
                   私たちは「ここに帰ってきたくなる宿」を理念に、北海道各地の宿泊施設を一貫して運営・管理しています。予約管理からゲスト対応、清掃管理まで、自社スタッフが責任を持って対応しています。
                 </p>
                 <p>
-                  2025年の設立以来、Airbnbを通じた1,300件以上の高評価レビューに裏付けられた運営実績を積み重ね、現在は札幌・旭川エリアにて30室を運営しています。
+                  2025年の設立以来、Airbnbを通じた1,300件以上の高評価レビューに裏付けられた運営実績を積み重ね、現在は札幌・旭川エリアにて26室を運営しています。
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
