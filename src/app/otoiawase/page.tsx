@@ -98,10 +98,10 @@ export default function OtoiawasePage() {
                   <div>
                     <p className="text-xs text-gray-400 font-sans mb-0.5 tracking-wide">代表電話</p>
                     <a
-                      href="tel:011-000-0000"
+                      href="tel:011-555-3951"
                       className="text-navy-800 text-base font-medium font-sans hover:text-navy-600 transition-colors"
                     >
-                      011-000-0000
+                      011-555-3951
                     </a>
                     <p className="text-gray-400 text-xs font-sans mt-0.5">平日 9:00〜18:00</p>
                   </div>

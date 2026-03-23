@@ -7,6 +7,7 @@ const MAPS_URL = "https://maps.app.goo.gl/w4qhUGrHxzB1dEPV7";
 const companyInfo = [
   { label: "会社名", value: "COZY STAY北海道株式会社" },
   { label: "所在地", value: "〒064-0809　北海道札幌市中央区南9条西4丁目3-15-202" },
+  { label: "電話番号", value: "011-555-3951" },
   { label: "設立", value: "2025年6月23日" },
   { label: "資本金", value: "300万円" },
   { label: "代表取締役", value: "西原龍起（Yongi Nishihara）" },
