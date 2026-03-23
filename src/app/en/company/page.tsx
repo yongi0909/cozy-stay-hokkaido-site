@@ -6,12 +6,12 @@ const MAPS_URL = "https://maps.app.goo.gl/w4qhUGrHxzB1dEPV7";
 
 const companyInfo = [
   { label: "Company Name", value: "COZY STAY HOKKAIDO Co., Ltd." },
-  { label: "Address", value: "3-15-202, Nishi 4-chome, Minami 9-jo, Chuo-ku, Sapporo, Hokkaido 064-0809, Japan" },
+  { label: "Address", value: "3-15-202 Minami 9-jo Nishi 4-chome, Chuo-ku, Sapporo, Hokkaido 064-0809, Japan" },
   { label: "Phone", value: "011-555-3951" },
   { label: "Established", value: "June 23, 2025" },
-  { label: "Capital", value: "¥3,000,000" },
-  { label: "CEO", value: "Yongi Nishihara" },
-  { label: "Business", value: "Operation and management of accommodation facilities in Hokkaido" },
+  { label: "Capital", value: "JPY 3,000,000" },
+  { label: "Representative Director", value: "Yongi Nishihara" },
+  { label: "Business Description", value: "Operation and management of accommodation properties in Hokkaido" },
   { label: "Areas", value: "Sapporo, Asahikawa" },
   { label: "Banking", value: "Hokuyo Bank, GMO Aozora Net Bank" },
   { label: "Shareholders", value: "Yongi Nishihara　100%" },
@@ -92,10 +92,10 @@ export default function EnCompanyPage() {
               style={{ fontFamily: "var(--font-serif)" }}
               className="text-white text-3xl lg:text-4xl font-semibold tracking-wide"
             >
-              Company Profile
+              Company Overview
             </h1>
             <p className="mt-4 text-white/70 text-sm leading-relaxed max-w-xl font-sans">
-              Basic information about COZY STAY HOKKAIDO Co., Ltd. and the team behind our operations.
+              COZY STAY HOKKAIDO Co., Ltd. is a hospitality management company operating accommodation properties in Hokkaido, Japan.
             </p>
             <div className="mt-5 w-12 h-px bg-gold-400" />
           </div>
