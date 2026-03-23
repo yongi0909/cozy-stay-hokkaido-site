@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const navItems = [
+const jpNavItems = [
   { href: "/", label: "ホーム" },
   { href: "/gaisha-gaiyo", label: "会社概要" },
   { href: "/jigyou-naiyo", label: "事業内容" },
@@ -14,10 +14,42 @@ const navItems = [
   { href: "/otoiawase", label: "お問い合わせ" },
 ];
 
+const enNavItems = [
+  { href: "/en", label: "Home" },
+  { href: "/en/company", label: "Company" },
+  { href: "/en/business", label: "Business" },
+  { href: "/en/properties", label: "Properties" },
+  { href: "/en/operations", label: "Operations" },
+  { href: "/en/contact", label: "Contact" },
+];
+
+const jpToEn: Record<string, string> = {
+  "/": "/en",
+  "/gaisha-gaiyo": "/en/company",
+  "/jigyou-naiyo": "/en/business",
+  "/shukuhaku-shisetsu": "/en/properties",
+  "/unei-taisei": "/en/operations",
+  "/otoiawase": "/en/contact",
+};
+
+const enToJp: Record<string, string> = {
+  "/en": "/",
+  "/en/company": "/gaisha-gaiyo",
+  "/en/business": "/jigyou-naiyo",
+  "/en/properties": "/shukuhaku-shisetsu",
+  "/en/operations": "/unei-taisei",
+  "/en/contact": "/otoiawase",
+};
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+
+  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const navItems = isEnglish ? enNavItems : jpNavItems;
+  const langToggleHref = isEnglish ? (enToJp[pathname] ?? "/") : (jpToEn[pathname] ?? "/en");
+  const langToggleLabel = isEnglish ? "JP" : "EN";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 8);
@@ -44,7 +76,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href={isEnglish ? "/en" : "/"} className="flex items-center gap-3 group">
               <div className="relative flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14">
                 <Image
                   src="/images/company-logo1.jpg"
@@ -90,24 +122,34 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Desktop CTA */}
-            <a
-              href="https://wfvacations.jp/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium tracking-wider text-navy-800 border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
-            >
-              宿泊予約サイト
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            {/* Desktop right area */}
+            <div className="hidden lg:flex items-center gap-3">
+              {/* Language Toggle */}
+              <Link
+                href={langToggleHref}
+                className="text-xs font-medium tracking-wider text-gray-500 hover:text-navy-800 transition-colors duration-200 border border-gray-300 hover:border-navy-400 px-2.5 py-1.5"
+              >
+                {langToggleLabel}
+              </Link>
+              {/* Booking CTA */}
+              <a
+                href="https://wfvacations.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium tracking-wider text-navy-800 border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
+              >
+                {isEnglish ? "Book Now" : "宿泊予約サイト"}
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
 
             {/* Mobile Hamburger */}
             <button
               className="lg:hidden flex flex-col justify-center items-center w-10 h-10"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? "メニューを閉じる" : "メニューを開く"}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
               <span
                 className={`block w-5 h-px bg-navy-800 transition-all duration-300 ${
@@ -156,14 +198,22 @@ export default function Header() {
                   </svg>
                 </Link>
               ))}
-              <a
-                href="https://wfvacations.jp/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 px-4 py-3.5 text-sm text-center font-medium tracking-wider text-navy-800 border border-navy-700"
-              >
-                宿泊予約サイトへ ↗
-              </a>
+              <div className="flex gap-3 mt-4">
+                <Link
+                  href={langToggleHref}
+                  className="flex-1 px-4 py-3 text-sm text-center font-medium tracking-wider text-gray-600 border border-gray-300"
+                >
+                  {langToggleLabel}
+                </Link>
+                <a
+                  href="https://wfvacations.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-[2] px-4 py-3.5 text-sm text-center font-medium tracking-wider text-navy-800 border border-navy-700"
+                >
+                  {isEnglish ? "Book Now ↗" : "宿泊予約サイトへ ↗"}
+                </a>
+              </div>
             </nav>
           </div>
         </div>

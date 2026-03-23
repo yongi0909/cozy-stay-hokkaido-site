@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
-const navItems = [
+const jpNavItems = [
   { href: "/", label: "ホーム" },
   { href: "/gaisha-gaiyo", label: "会社概要" },
   { href: "/jigyou-naiyo", label: "事業内容" },
@@ -10,7 +13,20 @@ const navItems = [
   { href: "/otoiawase", label: "お問い合わせ" },
 ];
 
+const enNavItems = [
+  { href: "/en", label: "Home" },
+  { href: "/en/company", label: "Company" },
+  { href: "/en/business", label: "Business" },
+  { href: "/en/properties", label: "Properties" },
+  { href: "/en/operations", label: "Operations" },
+  { href: "/en/contact", label: "Contact" },
+];
+
 export default function Footer() {
+  const pathname = usePathname();
+  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const navItems = isEnglish ? enNavItems : jpNavItems;
+
   return (
     <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
@@ -18,7 +34,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="max-w-xs">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
+            <Link href={isEnglish ? "/en" : "/"} className="inline-flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
                   src="/images/company-logo1.jpg"
@@ -40,9 +56,11 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              旅人が「また来たい」と思える宿泊空間を
-              <br />
-              北海道で運営・提供しています。
+              {isEnglish ? (
+                <>Providing quality accommodation experiences<br />in Hokkaido, Japan.</>
+              ) : (
+                <>旅人が「また来たい」と思える宿泊空間を<br />北海道で運営・提供しています。</>
+              )}
             </p>
           </div>
 
@@ -67,15 +85,21 @@ export default function Footer() {
             <p className="text-xs tracking-widest text-gold-400 uppercase mb-4">Company Info</p>
             <dl className="flex flex-col gap-2.5 text-sm text-white/70">
               <div>
-                <dt className="text-white/40 text-xs mb-0.5">所在地</dt>
-                <dd>〒064-0809<br />北海道札幌市中央区南9条西4丁目3-15-202</dd>
+                <dt className="text-white/40 text-xs mb-0.5">{isEnglish ? "Address" : "所在地"}</dt>
+                <dd>
+                  {isEnglish ? (
+                    <>3-15-202, Nishi 4-chome, Minami 9-jo,<br />Chuo-ku, Sapporo, Hokkaido 064-0809</>
+                  ) : (
+                    <>〒064-0809<br />北海道札幌市中央区南9条西4丁目3-15-202</>
+                  )}
+                </dd>
               </div>
               <div>
-                <dt className="text-white/40 text-xs mb-0.5">代表</dt>
-                <dd>西原 龍起</dd>
+                <dt className="text-white/40 text-xs mb-0.5">{isEnglish ? "CEO" : "代表"}</dt>
+                <dd>{isEnglish ? "Yongi Nishihara" : "西原 龍起"}</dd>
               </div>
               <div>
-                <dt className="text-white/40 text-xs mb-0.5">お問い合わせ</dt>
+                <dt className="text-white/40 text-xs mb-0.5">{isEnglish ? "Contact" : "お問い合わせ"}</dt>
                 <dd>
                   <a href="tel:011-555-3951" className="hover:text-white transition-colors">011-555-3951</a>
                   <br />
@@ -92,7 +116,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 px-4 py-2.5 text-xs font-medium tracking-wider text-gold-400 border border-gold-500/50 hover:bg-gold-500/10 transition-colors duration-200"
             >
-              宿泊予約サイトへ
+              {isEnglish ? "Booking Website" : "宿泊予約サイトへ"}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
