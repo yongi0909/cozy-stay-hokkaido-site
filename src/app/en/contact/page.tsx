@@ -74,7 +74,7 @@ export default function EnContactPage() {
               Contact
             </h1>
             <p className="mt-4 text-white/80 text-sm leading-relaxed max-w-xl font-sans">
-              We welcome inquiries from business partners and prospective collaborators.
+              We welcome inquiries from financial institutions, business partners, and other professional contacts.
             </p>
             <div className="mt-5 w-12 h-px bg-gold-400" />
           </div>
@@ -86,7 +86,7 @@ export default function EnContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Contact Info */}
             <div className="lg:col-span-1">
-              <SectionTitle label="CONTACT INFO" title="Contact Details" />
+              <SectionTitle label="CONTACT INFO" title="Contact Information" />
               <div className="mt-8 space-y-7">
                 {/* Phone */}
                 <div className="flex items-start gap-3">
@@ -148,19 +148,19 @@ export default function EnContactPage() {
 
                 {/* Company quick info */}
                 <div className="pt-6 border-t border-cream-200">
-                  <p className="text-xs text-gray-400 font-sans mb-3 tracking-wide">COMPANY INFO</p>
+                  <p className="text-xs text-gray-400 font-sans mb-3 tracking-wide">Company Info</p>
                   <dl className="space-y-2 text-xs font-sans">
                     <div className="flex gap-3">
-                      <dt className="text-gray-400 w-20 flex-shrink-0">CEO</dt>
+                      <dt className="text-gray-400 w-28 flex-shrink-0">Representative Director</dt>
                       <dd className="text-gray-700">Yongi Nishihara</dd>
                     </div>
                     <div className="flex gap-3">
-                      <dt className="text-gray-400 w-20 flex-shrink-0">Established</dt>
+                      <dt className="text-gray-400 w-28 flex-shrink-0">Established</dt>
                       <dd className="text-gray-700">June 23, 2025</dd>
                     </div>
                     <div className="flex gap-3">
-                      <dt className="text-gray-400 w-20 flex-shrink-0">Capital</dt>
-                      <dd className="text-gray-700">¥3,000,000</dd>
+                      <dt className="text-gray-400 w-28 flex-shrink-0">Capital</dt>
+                      <dd className="text-gray-700">JPY 3,000,000</dd>
                     </div>
                   </dl>
                 </div>
@@ -206,7 +206,7 @@ export default function EnContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-gray-800 font-sans focus:outline-none focus:border-navy-400 focus:bg-white transition-colors"
-                        placeholder="Your Company, Inc."
+                        placeholder="ABC Corporation / XYZ Bank"
                       />
                     </div>
                     {/* Name */}
@@ -227,7 +227,7 @@ export default function EnContactPage() {
                     {/* Phone */}
                     <div>
                       <label className="block text-xs font-medium text-navy-800 font-sans mb-1.5 tracking-wide">
-                        Phone
+                        Phone Number
                       </label>
                       <input
                         type="tel"
@@ -241,7 +241,7 @@ export default function EnContactPage() {
                     {/* Email */}
                     <div className="sm:col-span-2">
                       <label className="block text-xs font-medium text-navy-800 font-sans mb-1.5 tracking-wide">
-                        Email <span className="text-red-400 ml-1">Required</span>
+                        Email Address <span className="text-red-400 ml-1">Required</span>
                       </label>
                       <input
                         type="email"
@@ -250,7 +250,7 @@ export default function EnContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-gray-800 font-sans focus:outline-none focus:border-navy-400 focus:bg-white transition-colors"
-                        placeholder="you@company.com"
+                        placeholder="example@company.com"
                       />
                     </div>
                     {/* Category */}
@@ -267,7 +267,7 @@ export default function EnContactPage() {
                         <option value="">Please select</option>
                         <option value="partner">Business Partnership</option>
                         <option value="property">Property / Facility Inquiry</option>
-                        <option value="media">Press / Media</option>
+                        <option value="media">Media Inquiry</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -283,7 +283,7 @@ export default function EnContactPage() {
                         required
                         rows={6}
                         className="w-full border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-gray-800 font-sans focus:outline-none focus:border-navy-400 focus:bg-white transition-colors resize-none"
-                        placeholder="Please describe your inquiry."
+                        placeholder="Please enter your message."
                       />
                     </div>
                   </div>
@@ -307,7 +307,8 @@ export default function EnContactPage() {
                       >
                         Privacy Policy
                       </Link>{" "}
-                      and consent to the handling of my personal information for the purpose of responding to this inquiry.
+                      and consent to the handling of my personal information.<br />
+                      The information submitted through this form will only be used for the purpose of responding to your inquiry.
                     </label>
                   </div>
 
@@ -316,7 +317,7 @@ export default function EnContactPage() {
                     disabled={formState === "submitting"}
                     className="w-full sm:w-auto px-10 py-4 bg-navy-800 text-white text-sm font-medium tracking-wider hover:bg-navy-700 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed font-sans"
                   >
-                    {formState === "submitting" ? "Sending..." : "Send Message"}
+                    {formState === "submitting" ? "Submitting..." : "Submit"}
                   </button>
                 </form>
               )}
