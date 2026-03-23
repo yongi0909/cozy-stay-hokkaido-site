@@ -82,10 +82,10 @@ export default function EnBusinessPage() {
               style={{ fontFamily: "var(--font-serif)" }}
               className="text-white text-3xl lg:text-4xl font-semibold tracking-wide"
             >
-              Business
+              Business Overview
             </h1>
             <p className="mt-4 text-white/90 text-sm font-semibold leading-relaxed max-w-xl font-sans">
-              An overview of COZY STAY HOKKAIDO&apos;s accommodation operations in Hokkaido and the services we provide.
+              We operate and manage accommodation properties in Hokkaido, with a focus on quality, reliability, and guest satisfaction.
             </p>
             <div className="mt-5 w-12 h-px bg-gold-400" />
           </div>
@@ -99,13 +99,13 @@ export default function EnBusinessPage() {
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-5 text-sm text-gray-600 leading-relaxed font-sans">
               <p>
-                COZY STAY HOKKAIDO Co., Ltd. is a company primarily engaged in the operation and management of accommodation facilities in Hokkaido. We operate multiple properties in Sapporo and Asahikawa under both licensed inn (ryokan) and short-term rental (minpaku) formats.
+                COZY STAY HOKKAIDO develops and operates accommodation properties primarily in the Sapporo and Asahikawa areas.
               </p>
               <p>
-                Beyond day-to-day operations, we manage reservation systems, guest support, housekeeping, and facility maintenance entirely in-house, ensuring a consistently high standard of service quality.
+                Leveraging experience accumulated through a growing portfolio of hospitality properties, we provide comfortable, well-managed stays for both domestic and international guests.
               </p>
               <p>
-                Our track record—<strong className="text-navy-800 font-semibold">over 1,300 reviews</strong> and an average rating of <strong className="text-navy-800 font-semibold">4.98 on Airbnb</strong>—reflects the results of our dedicated, locally-based team delivering honest and attentive service every day.
+                Our business is built on reliable operations, responsive guest support, and consistent property management, aiming to deliver a high-quality accommodation experience in Hokkaido.
               </p>
             </div>
 
