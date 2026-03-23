@@ -17,7 +17,19 @@ const slides = [
   { id: 11, src: "/images/slider/toppage-slider11.jpg" },
 ];
 
-export default function HeroSlider() {
+interface HeroSliderProps {
+  headline1?: string;
+  headline2?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+export default function HeroSlider({
+  headline1 = "北海道で、",
+  headline2 = "あなたがまた帰ってきたくなる宿を。",
+  ctaLabel = "宿泊施設一覧",
+  ctaHref = "/shukuhaku-shisetsu",
+}: HeroSliderProps = {}) {
   const [current, setCurrent] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
 
@@ -78,18 +90,18 @@ export default function HeroSlider() {
             className="text-white font-normal leading-relaxed drop-shadow-md mb-8"
           >
             <span className="block text-xl sm:text-2xl lg:text-3xl">
-              北海道で、
+              {headline1}
             </span>
             <span className="block text-xl sm:text-2xl lg:text-3xl mt-2">
-              あなたがまた帰ってきたくなる宿を。
+              {headline2}
             </span>
           </h1>
           <div className="flex items-center justify-center pointer-events-auto">
             <a
-              href="/shukuhaku-shisetsu"
+              href={ctaHref}
               className="inline-block px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium tracking-wider border border-white/40 hover:bg-white/20 transition-colors duration-200"
             >
-              宿泊施設一覧
+              {ctaLabel}
             </a>
           </div>
         </div>

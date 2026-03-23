@@ -4,7 +4,7 @@ import HeroSlider from "@/components/HeroSlider";
 import SectionTitle from "@/components/SectionTitle";
 
 const kpis = [
-  { value: "30", unit: " rooms", label: "Properties Managed", note: "Group total", subnote: "(incl. 26 in Hokkaido)" },
+  { value: "30", unit: " rooms", label: "Properties Operated", note: "Group Total", subnote: "(including 26 units in Hokkaido)" },
   { value: "1,300", unit: "+", label: "Airbnb Reviews", note: "Cumulative total", subnote: "" },
   { value: "4.98", unit: " / 5.00", label: "Average Airbnb Rating", note: "Overall guest score", subnote: "" },
 ];
@@ -40,13 +40,18 @@ export default function EnHomePage() {
   return (
     <>
       {/* Hero Slider */}
-      <HeroSlider />
+      <HeroSlider
+        headline1="A place in Hokkaido"
+        headline2="you will want to come back to."
+        ctaLabel="View Properties"
+        ctaHref="/en/properties"
+      />
 
       {/* KPI Section */}
       <section className="bg-navy-800 py-14">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <p className="text-gold-400 text-xs tracking-[0.4em] uppercase font-sans text-center mb-10">
-            OPERATIONAL ACHIEVEMENTS
+            Operational Achievements
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
             {kpis.map((kpi) => (
@@ -88,7 +93,7 @@ export default function EnHomePage() {
                   Under our philosophy of creating a place guests want to return to, we consistently operate and manage accommodation facilities across Hokkaido—handling everything from reservation management and guest support to housekeeping, all with our own dedicated staff.
                 </p>
                 <p>
-                  Since our establishment in 2025, we have built a track record of more than 1,300 highly-rated Airbnb reviews, and currently operate 26 rooms in the Sapporo and Asahikawa areas.
+                  Since its establishment in 2025, COZY STAY HOKKAIDO has built a strong operational track record backed by more than 1,300 highly rated Airbnb reviews, and currently operates 26 units in the Sapporo and Asahikawa areas.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
