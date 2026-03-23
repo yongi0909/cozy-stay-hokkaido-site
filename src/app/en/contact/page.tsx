@@ -301,7 +301,7 @@ export default function EnContactPage() {
                     <label htmlFor="privacy" className="text-xs text-gray-500 font-sans leading-relaxed">
                       I agree to the{" "}
                       <Link
-                        href="/privacy-policy"
+                        href="/en/privacy-policy"
                         target="_blank"
                         className="text-navy-600 underline underline-offset-2 hover:text-navy-800 transition-colors"
                       >
