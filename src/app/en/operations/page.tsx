@@ -3,14 +3,14 @@ import SectionTitle from "@/components/SectionTitle";
 
 const roles = [
   {
-    area: "Sapporo",
+    area: "Sapporo Area",
     color: "navy",
     members: [
       {
         name: "Mikako Natsuhori",
-        role: "Guest Relations",
+        role: "Guest Support",
         detail:
-          "Handles check-in, check-out, guest inquiries, and first-response emergency communications. Ensures guests feel supported and at ease throughout their stay.",
+          "Responsible for check-in/check-out support, guest inquiries, and handling urgent communications to ensure a smooth and comfortable stay.",
         icon: (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
@@ -19,9 +19,9 @@ const roles = [
       },
       {
         name: "Masanobu Tazawa",
-        role: "Sapporo Area Manager — Housekeeping & Facility Management",
+        role: "Sapporo Area Manager / Cleaning & Property Management",
         detail:
-          "Coordinates and manages housekeeping staff across all Sapporo properties. Oversees post-checkout cleaning schedules and quality checks end-to-end.",
+          "Oversees operations across the Sapporo area, including cleaning staff coordination and overall property management to maintain quality standards.",
         icon: (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -31,14 +31,14 @@ const roles = [
     ],
   },
   {
-    area: "Asahikawa",
+    area: "Asahikawa Area",
     color: "slate",
     members: [
       {
         name: "Mayumi Kishi",
-        role: "Asahikawa Area Manager — Guest Relations, Housekeeping & Facility Management",
+        role: "Asahikawa Area Manager / Guest Support / Cleaning & Property Management",
         detail:
-          "As area manager, oversees all operations in the Asahikawa area—from guest support and facility management to housekeeping coordination.",
+          "Leads operations in the Asahikawa area, covering guest support, property management, and cleaning coordination.",
         icon: (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
@@ -91,8 +91,8 @@ export default function EnOperationsPage() {
         <div className="max-w-5xl mx-auto">
           <SectionTitle
             label="TEAM STRUCTURE"
-            title="Roles & Responsibilities"
-            description="Dedicated staff are assigned to each area, enabling swift and accountable operations."
+            title="Operations Structure"
+            description="We assign dedicated staff to each area to ensure fast, reliable, and accountable operations."
           />
 
           {/* Structure Diagram */}
@@ -102,7 +102,7 @@ export default function EnOperationsPage() {
               <div className="bg-navy-800 text-white px-8 py-4 text-center min-w-[200px]">
                 <p className="text-gold-400 text-[10px] tracking-widest uppercase font-sans mb-1">Representative</p>
                 <p style={{ fontFamily: "var(--font-serif)" }} className="text-base font-semibold">Yongi Nishihara</p>
-                <p className="text-white/60 text-xs font-sans mt-0.5">CEO & Overall Director</p>
+                <p className="text-white/60 text-xs font-sans mt-0.5">Representative Director / Overall Management</p>
               </div>
             </div>
 
