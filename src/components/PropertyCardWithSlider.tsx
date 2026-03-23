@@ -7,9 +7,11 @@ import PhotoLightbox from "@/components/PhotoLightbox";
 
 interface Props {
   property: Property;
+  buttonLabel?: string;
+  areaLabelOverride?: string;
 }
 
-export default function PropertyCardWithSlider({ property }: Props) {
+export default function PropertyCardWithSlider({ property, buttonLabel = "予約・詳細を見る", areaLabelOverride }: Props) {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
@@ -121,7 +123,7 @@ export default function PropertyCardWithSlider({ property }: Props) {
         {/* ── Card content ── */}
         <div className="p-5">
           <span className="inline-block px-2 py-0.5 text-xs font-medium text-navy-700 bg-navy-50 border border-navy-100 mb-3 font-sans">
-            {property.areaLabel}
+            {areaLabelOverride ?? property.areaLabel}
           </span>
           <h3
             style={{ fontFamily: "var(--font-serif)" }}
@@ -138,7 +140,7 @@ export default function PropertyCardWithSlider({ property }: Props) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs font-medium tracking-wider text-navy-700 border border-navy-600 px-4 py-2 hover:bg-navy-800 hover:text-white hover:border-navy-800 transition-all duration-200 font-sans"
           >
-            予約・詳細を見る
+            {buttonLabel}
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>

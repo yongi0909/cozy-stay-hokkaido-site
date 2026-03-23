@@ -4,6 +4,17 @@ import PropertyCard from "@/components/PropertyCard";
 import PropertyCardWithSlider from "@/components/PropertyCardWithSlider";
 import { properties } from "@/data/properties";
 
+const areaLabelEn: Record<string, string> = {
+  "札幌・中島公園": "Sapporo / Nakajima Park",
+  "札幌・中心部":   "Sapporo / Central",
+  "札幌・本郷通":   "Sapporo / Hongodori",
+  "札幌・東エリア": "Sapporo / East",
+  "札幌・円山":     "Sapporo / Maruyama",
+  "旭川":           "Asahikawa",
+};
+
+const EN_BTN = "View Details / Book";
+
 export default function EnPropertiesPage() {
   const sapporoProps = properties.filter((p) => p.area === "sapporo");
   const asahikawaProps = properties.filter((p) => p.area === "asahikawa");
@@ -12,8 +23,13 @@ export default function EnPropertiesPage() {
     <>
       <PageHeader
         label="PROPERTIES"
-        title="Our Properties"
-        description={<>Browse all {properties.length} accommodation properties we operate in Hokkaido.<br />Details and booking links are available on each property page.</>}
+        title="Properties"
+        description={
+          <>
+            We are pleased to introduce the 26 accommodation units we operate in Hokkaido.<br />
+            You can view details and booking information for each property from the pages below.
+          </>
+        }
       />
 
       {/* Summary bar */}
@@ -61,15 +77,25 @@ export default function EnPropertiesPage() {
             <SectionTitle
               label="SAPPORO"
               title="Sapporo Area"
-              description="23 rooms across Sapporo, spanning Nakajima Koen, Hongo-dori (Shiroishi-ku), Higashi-ku, and Maruyama."
+              description="We operate 23 accommodation units in the Sapporo area, offering convenient access to the city and comfortable stays for a wide range of guests."
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {sapporoProps.map((property) =>
               property.photos ? (
-                <PropertyCardWithSlider key={property.id} property={property} />
+                <PropertyCardWithSlider
+                  key={property.id}
+                  property={property}
+                  buttonLabel={EN_BTN}
+                  areaLabelOverride={areaLabelEn[property.areaLabel]}
+                />
               ) : (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                  buttonLabel={EN_BTN}
+                  areaLabelOverride={areaLabelEn[property.areaLabel]}
+                />
               )
             )}
           </div>
@@ -83,15 +109,25 @@ export default function EnPropertiesPage() {
             <SectionTitle
               label="ASAHIKAWA"
               title="Asahikawa Area"
-              description="3 rooms in and around Asahikawa, surrounded by the natural beauty of the Daisetsuzan mountain range."
+              description="We operate 3 accommodation properties in the Asahikawa area, providing comfortable stays with convenient access to nature and regional attractions."
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {asahikawaProps.map((property) =>
               property.photos ? (
-                <PropertyCardWithSlider key={property.id} property={property} />
+                <PropertyCardWithSlider
+                  key={property.id}
+                  property={property}
+                  buttonLabel={EN_BTN}
+                  areaLabelOverride={areaLabelEn[property.areaLabel]}
+                />
               ) : (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                  buttonLabel={EN_BTN}
+                  areaLabelOverride={areaLabelEn[property.areaLabel]}
+                />
               )
             )}
           </div>
