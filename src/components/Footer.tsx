@@ -52,7 +52,7 @@ export default function Footer() {
                 }}
                 className="text-white text-lg font-semibold leading-snug"
               >
-                COZY STAY北海道株式会社
+                {isEnglish ? "COZY STAY HOKKAIDO" : "COZY STAY北海道株式会社"}
               </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
@@ -111,7 +111,7 @@ export default function Footer() {
             </dl>
 
             <a
-              href="https://wfvacations.jp/"
+              href="https://booking.cozystayhokkaido.jp/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 px-4 py-2.5 text-xs font-medium tracking-wider text-gold-400 border border-gold-500/50 hover:bg-gold-500/10 transition-colors duration-200"
@@ -126,7 +126,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
-          <p>© {new Date().getFullYear()} COZY STAY北海道株式会社. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {isEnglish ? "COZY STAY HOKKAIDO Co., Ltd." : "COZY STAY北海道株式会社"}. All rights reserved.</p>
           <p>Sapporo / Asahikawa, Hokkaido, Japan</p>
         </div>
       </div>

@@ -109,7 +109,7 @@ export default function ShukuhakuShisetsuPage() {
             全施設は公式予約サイトよりご予約いただけます
           </h2>
           <a
-            href="https://wfvacations.jp/"
+            href="https://booking.cozystayhokkaido.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-white text-sm font-medium tracking-wider hover:bg-gold-600 transition-colors duration-200"

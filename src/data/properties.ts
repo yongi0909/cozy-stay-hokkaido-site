@@ -19,7 +19,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "中島公園そばの静かな住宅街に位置する1LDKのゆとりある空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/301",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-301",
     photos: [
       "/images/rooms/cn301/CN301-01.jpg",
       "/images/rooms/cn301/CN301-02.jpg",
@@ -34,7 +34,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "7階に位置し、開放感のある眺望を備えた快適な滞在空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/701",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-701",
     photos: [
       "/images/rooms/cssc701/CN701-01.jpg",
       "/images/rooms/cssc701/CN701-02.jpg",
@@ -48,7 +48,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "落ち着いたインテリアと機能的な設備を兼ね備えたお部屋です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/801",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-801",
     photos: [
       "/images/rooms/cssc801/CN801-01.jpg",
       "/images/rooms/cssc801/CN801-02.jpg",
@@ -63,7 +63,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "清潔感ある空間で、長期滞在にも対応した設備を整えています。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/805",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-805",
     photos: [
       "/images/rooms/cssc805/CN805-01.jpg",
       "/images/rooms/cssc805/CN805-02.jpg",
@@ -78,7 +78,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "自然光が心地よく差し込む上層階の快適な滞在スペースです。",
-    bookingUrl: "https://airbnb.jp/h/cn906",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-906",
     photos: [
       "/images/rooms/cn906/CN906-01.jpg",
       "/images/rooms/cn906/CN906-02.jpg",
@@ -93,7 +93,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "13階からの眺望と落ち着いた内装が調和する特別な空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1302",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-1302",
     photos: [
       "/images/rooms/cssc-shogun/CN1302-01.jpg",
       "/images/rooms/cssc-shogun/CN1302-02.jpg",
@@ -108,7 +108,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "高層階ならではの開放感と洗練されたインテリアをお楽しみいただけます。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1305",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-1305",
     photos: [
       "/images/rooms/cssc1305/CN1305-01.jpg",
       "/images/rooms/cssc1305/CN1305-02.jpg",
@@ -123,7 +123,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "15階の角部屋で、札幌市街を一望できる贅沢な滞在を。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1504",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-1504",
     photos: [
       "/images/rooms/cssc1504/CN1504-01.jpg",
       "/images/rooms/cssc1504/CN1504-02.jpg",
@@ -138,7 +138,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "上層階の静かな環境で、洗練されたプライベート空間をご提供します。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1704",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-1704",
     photos: [
       "/images/rooms/cssc1704/CN1704-01.jpg",
       "/images/rooms/cssc1704/CN1704-02.jpg",
@@ -153,7 +153,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "17階の高みから札幌の街並みを一望する、特別感ある滞在スペースです。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/nakajima/1706",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-nakajima-1706",
     photos: [
       "/images/rooms/cssc1706/CN1706-01.jpg",
       "/images/rooms/cssc1706/CN1706-02.jpg",
@@ -169,7 +169,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "市中心部へのアクセス良好な利便性の高いお部屋です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/central/404",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-404",
     photos: [
       "/images/rooms/cssc404/C404-01.jpg",
       "/images/rooms/cssc404/C404-02.jpg",
@@ -184,7 +184,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "清潔感あふれる空間で、ビジネスにも観光にも最適です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/central/502",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-502",
     photos: [
       "/images/rooms/nc502/C502-01.jpg",
       "/images/rooms/nc502/C502-02.jpg",
@@ -199,7 +199,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・中島公園",
     description: "18階の高層からは市街地を見渡す絶景が広がります。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/central/1801",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-central-1801",
     photos: [
       "/images/rooms/cssc1801/C1801-01.jpg",
       "/images/rooms/cssc1801/C1801-02.jpg",
@@ -215,7 +215,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・白石区",
     description: "本郷通沿いの落ち着いたエリアに位置する快適なお部屋です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/405",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-hongodori-405",
     photos: [
       "/images/rooms/hongodori405/H405-01.jpg",
       "/images/rooms/hongodori405/H405-02.jpg",
@@ -230,7 +230,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・白石区",
     description: "6階からの開放的な眺望と機能的な間取りが魅力のお部屋です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/605",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-hongodori-605",
     photos: [
       "/images/rooms/hongodori605/H605-01.jpg",
       "/images/rooms/hongodori605/H605-02.jpg",
@@ -245,7 +245,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・白石区",
     description: "上層階ならではの静けさと眺望が楽しめる上質な滞在空間。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/hongodoori/1005",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-hongodori-1005",
     photos: [
       "/images/rooms/hongodori1005/H1005-01.jpg",
       "/images/rooms/hongodori1005/H1005-02.jpg",
@@ -261,7 +261,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "落ち着いた住宅街に溶け込む、ゆとりある生活空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/east/302",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-east-302",
     photos: [
       "/images/rooms/csse-a/E302-01.jpg",
       "/images/rooms/csse-a/E302-02.jpg",
@@ -276,7 +276,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "隣室とセットでの大人数対応も可能な、柔軟な滞在プランに対応します。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/east/303",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-east-303",
     photos: [
       "/images/rooms/csse-b/E303-01.jpg",
       "/images/rooms/csse-b/E303-02.jpg",
@@ -291,7 +291,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "日当たり良好な4階のお部屋。長期滞在でも快適にお過ごしいただけます。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/east/405",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-east-405",
     photos: [
       "/images/rooms/csse-d/E405-01.jpg",
       "/images/rooms/csse-d/E405-02.jpg",
@@ -306,7 +306,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・東区",
     description: "コンパクトながらも必要な設備が揃ったスマートな滞在空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/east/305",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-east-305",
     photos: [
       "/images/rooms/csse-c/E305-01.jpg",
       "/images/rooms/csse-c/E305-02.jpg",
@@ -322,7 +322,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "円山エリアの9階から望む緑豊かな眺望が心を癒す特別な空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/901",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-maruyama-901",
     photos: [
       "/images/rooms/m901/M901-01.jpg",
       "/images/rooms/m901/M901-02.jpg",
@@ -337,7 +337,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "北海道神宮に近い閑静な円山エリア。上質な滞在をご提供します。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/601",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-maruyama-601",
     photos: [
       "/images/rooms/cssm601/M601-01.jpg",
       "/images/rooms/cssm601/M601-02.jpg",
@@ -352,7 +352,7 @@ export const properties: Property[] = [
     area: "sapporo",
     areaLabel: "札幌・円山",
     description: "IBIZAスタイルのデザインが際立つ、個性的でスタイリッシュな空間です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/maruyama/ibiza/202",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-sapporo-ibiza-maruyama-202",
     photos: [
       "/images/rooms/cssm202/M202-01.jpg",
       "/images/rooms/cssm202/M202-02.jpg",
@@ -368,7 +368,7 @@ export const properties: Property[] = [
     area: "asahikawa",
     areaLabel: "旭川",
     description: "旭川市内の好立地に位置する、快適で温かみのある宿泊施設です。",
-    bookingUrl: "https://wfvacations.jp/hokkaido/asahikawa/0",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-asahikawa",
     photos: [
       "/images/rooms/cozystayasahikawa/CSA-01.jpg",
       "/images/rooms/cozystayasahikawa/CSA-02.jpg",
@@ -383,7 +383,7 @@ export const properties: Property[] = [
     area: "asahikawa",
     areaLabel: "旭川",
     description: "旭川郊外の自然豊かなエリアに位置する、落ち着いた空間です。",
-    bookingUrl: "https://airbnb.jp/h/kamui",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-kamui",
     photos: [
       "/images/rooms/kamui/CSK-01.jpg",
       "/images/rooms/kamui/CSK-02.jpg",
@@ -398,7 +398,7 @@ export const properties: Property[] = [
     area: "asahikawa",
     areaLabel: "旭川",
     description: "大雪山系を望む比布町の静かな環境で、北海道の自然を満喫できます。",
-    bookingUrl: "https://airbnb.jp/h/pippu",
+    bookingUrl: "https://booking.cozystayhokkaido.jp/properties/cozy-stay-pippu",
     photos: [
       "/images/rooms/pippu/CSP-01.jpg",
       "/images/rooms/pippu/CSP-02.jpg",

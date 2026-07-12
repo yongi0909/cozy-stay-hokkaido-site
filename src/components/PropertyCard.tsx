@@ -11,7 +11,7 @@ export default function PropertyCard({ property, buttonLabel = "予約・詳細�
     <div className="bg-white border border-cream-200 hover:border-navy-300 hover:shadow-md transition-all duration-200 group">
       {/* Photo placeholder */}
       <div className="h-44 bg-gradient-to-br from-navy-800 to-navy-900 flex items-end p-3">
-        <span className="text-white/30 text-xs font-sans">【写真プレースホルダー】</span>
+        <span className="text-white/30 text-xs font-sans">[Photo Placeholder]</span>
       </div>
 
       {/* Content */}

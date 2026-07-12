@@ -108,7 +108,7 @@ export default function JigyouNaiyoPage() {
                 各施設の日常運営にとどまらず、予約管理・ゲストサポート・清掃手配・施設メンテナンスまでを一貫して自社で担うことで、安定した運営品質を維持しています。
               </p>
               <p>
-                Airbnbにおいて<strong className="text-navy-800 font-semibold">レビュー1,300件以上</strong>・平均評価<strong className="text-navy-800 font-semibold">スコア4.98</strong>という実績が示すとおり、高い顧客満足度を継続的に実現しています。これは、地域に密着したスタッフが誠実・丁寧に業務を遂行してきた結果です。
+                Airbnbにおいて<strong className="text-navy-800 font-semibold">レビュー1,700件以上</strong>・平均評価<strong className="text-navy-800 font-semibold">スコア4.98</strong>という実績が示すとおり、高い顧客満足度を継続的に実現しています。これは、地域に密着したスタッフが誠実・丁寧に業務を遂行してきた結果です。
               </p>
             </div>
 

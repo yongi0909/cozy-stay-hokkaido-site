@@ -67,7 +67,7 @@ export default function HeroSlider({
         >
           <Image
             src={slide.src}
-            alt={`COZY STAY北海道 スライド ${slide.id}`}
+            alt={`COZY STAY HOKKAIDO slide ${slide.id}`}
             fill
             className="object-cover"
             priority={i === 0}
@@ -113,7 +113,7 @@ export default function HeroSlider({
           <button
             key={i}
             onClick={() => goTo(i)}
-            aria-label={`スライド ${i + 1}`}
+            aria-label={`Slide ${i + 1}`}
             className={`transition-all duration-300 rounded-full ${
               i === current
                 ? "w-6 h-1.5 bg-gold-400"
@@ -127,7 +127,7 @@ export default function HeroSlider({
       <button
         onClick={() => goTo((current - 1 + slides.length) % slides.length)}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-black/20 hover:bg-black/40 text-white transition-colors duration-200"
-        aria-label="前のスライド"
+        aria-label="Previous slide"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -136,7 +136,7 @@ export default function HeroSlider({
       <button
         onClick={() => next()}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-black/20 hover:bg-black/40 text-white transition-colors duration-200"
-        aria-label="次のスライド"
+        aria-label="Next slide"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

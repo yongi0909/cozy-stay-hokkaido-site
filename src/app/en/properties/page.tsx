@@ -88,6 +88,7 @@ export default function EnPropertiesPage() {
                   property={property}
                   buttonLabel={EN_BTN}
                   areaLabelOverride={areaLabelEn[property.areaLabel]}
+                  expandLabel="Expand"
                 />
               ) : (
                 <PropertyCard
@@ -120,6 +121,7 @@ export default function EnPropertiesPage() {
                   property={property}
                   buttonLabel={EN_BTN}
                   areaLabelOverride={areaLabelEn[property.areaLabel]}
+                  expandLabel="Expand"
                 />
               ) : (
                 <PropertyCard
@@ -145,7 +147,7 @@ export default function EnPropertiesPage() {
             All properties can be booked through our official booking website
           </h2>
           <a
-            href="https://wfvacations.jp/"
+            href="https://booking.cozystayhokkaido.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-white text-sm font-medium tracking-wider hover:bg-gold-600 transition-colors duration-200"

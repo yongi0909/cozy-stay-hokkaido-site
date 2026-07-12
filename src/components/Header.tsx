@@ -96,7 +96,7 @@ export default function Header() {
                 }}
                 className="text-navy-800 text-lg sm:text-xl font-semibold leading-snug"
               >
-                COZY STAY北海道株式会社
+                {isEnglish ? "COZY STAY HOKKAIDO" : "COZY STAY北海道株式会社"}
               </span>
             </Link>
 
@@ -133,7 +133,7 @@ export default function Header() {
               </Link>
               {/* Booking CTA */}
               <a
-                href="https://wfvacations.jp/"
+                href="https://booking.cozystayhokkaido.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium tracking-wider text-navy-800 border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
@@ -206,7 +206,7 @@ export default function Header() {
                   {langToggleLabel}
                 </Link>
                 <a
-                  href="https://wfvacations.jp/"
+                  href="https://booking.cozystayhokkaido.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-[2] px-4 py-3.5 text-sm text-center font-medium tracking-wider text-navy-800 border border-navy-700"

@@ -76,7 +76,7 @@ export default function PhotoLightbox({
         <button
           onClick={onClose}
           className="w-9 h-9 flex items-center justify-center text-white/70 hover:text-white transition-colors"
-          aria-label="閉じる"
+          aria-label="Close"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -100,7 +100,7 @@ export default function PhotoLightbox({
           >
             <Image
               src={src}
-              alt={`${propertyName} — 写真 ${i + 1}`}
+              alt={`${propertyName} — Photo ${i + 1}`}
               fill
               className="object-contain"
               sizes="100vw"
@@ -113,7 +113,7 @@ export default function PhotoLightbox({
         <button
           onClick={onPrev}
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/40 hover:bg-black/60 text-white transition-colors"
-          aria-label="前の写真"
+          aria-label="Previous photo"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -122,7 +122,7 @@ export default function PhotoLightbox({
         <button
           onClick={onNext}
           className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/40 hover:bg-black/60 text-white transition-colors"
-          aria-label="次の写真"
+          aria-label="Next photo"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -149,11 +149,11 @@ export default function PhotoLightbox({
                 ? "ring-2 ring-gold-400 opacity-100"
                 : "opacity-40 hover:opacity-70"
             }`}
-            aria-label={`写真 ${i + 1}`}
+            aria-label={`Photo ${i + 1}`}
           >
             <Image
               src={src}
-              alt={`サムネイル ${i + 1}`}
+              alt={`Thumbnail ${i + 1}`}
               fill
               className="object-cover"
               sizes="64px"

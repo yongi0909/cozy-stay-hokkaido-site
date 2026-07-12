@@ -9,9 +9,10 @@ interface Props {
   property: Property;
   buttonLabel?: string;
   areaLabelOverride?: string;
+  expandLabel?: string;
 }
 
-export default function PropertyCardWithSlider({ property, buttonLabel = "予約・詳細を見る", areaLabelOverride }: Props) {
+export default function PropertyCardWithSlider({ property, buttonLabel = "予約・詳細を見る", areaLabelOverride, expandLabel = "拡大" }: Props) {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
@@ -52,7 +53,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
           onClick={() => setLightboxOpen(true)}
-          title="クリックして拡大"
+          title={expandLabel}
         >
           {photos.map((src, i) => (
             <div
@@ -63,7 +64,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
             >
               <Image
                 src={src}
-                alt={`${property.name} — 写真 ${i + 1}`}
+                alt={`${property.name} — Photo ${i + 1}`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
@@ -76,7 +77,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
           <button
             onClick={prev}
             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white transition-colors duration-150"
-            aria-label="前の写真"
+            aria-label="Previous photo"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -85,7 +86,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
           <button
             onClick={next}
             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white transition-colors duration-150"
-            aria-label="次の写真"
+            aria-label="Next photo"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -98,7 +99,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
               <button
                 key={i}
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); setCurrent(i); }}
-                aria-label={`写真 ${i + 1}`}
+                aria-label={`Photo ${i + 1}`}
                 className={`transition-all duration-200 rounded-full ${
                   i === current ? "w-4 h-1 bg-white" : "w-1 h-1 bg-white/50 hover:bg-white/75"
                 }`}
@@ -116,7 +117,7 @@ export default function PropertyCardWithSlider({ property, buttonLabel = "予約
             <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
             </svg>
-            拡大
+            {expandLabel}
           </span>
         </div>
 

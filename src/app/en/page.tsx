@@ -4,8 +4,8 @@ import HeroSlider from "@/components/HeroSlider";
 import SectionTitle from "@/components/SectionTitle";
 
 const kpis = [
-  { value: "30", unit: " rooms", label: "Properties Operated", note: "Group Total", subnote: "(including 26 units in Hokkaido)" },
-  { value: "1,300", unit: "+", label: "Airbnb Reviews", note: "Cumulative total", subnote: "" },
+  { value: "33", unit: " rooms", label: "Properties Operated", note: "Group Total", subnote: "(including 29 units in Hokkaido)" },
+  { value: "1,700", unit: "+", label: "Airbnb Reviews", note: "Cumulative total", subnote: "" },
   { value: "4.98", unit: " / 5.00", label: "Average Airbnb Rating", note: "Overall guest score", subnote: "" },
 ];
 
@@ -26,7 +26,7 @@ const sections = [
     href: "/en/properties",
     label: "PROPERTIES",
     title: "Properties",
-    desc: "All 30 properties in the Sapporo and Asahikawa areas.",
+    desc: "All 33 properties in the Sapporo and Asahikawa areas.",
   },
   {
     href: "/en/operations",
@@ -93,7 +93,7 @@ export default function EnHomePage() {
                   Under our philosophy of creating a place guests want to return to, we consistently operate and manage accommodation facilities across Hokkaido—handling everything from reservation management and guest support to housekeeping, all with our own dedicated staff.
                 </p>
                 <p>
-                  Since its establishment in 2025, COZY STAY HOKKAIDO has built a strong operational track record backed by more than 1,300 highly rated Airbnb reviews, and currently operates 26 units in the Sapporo and Asahikawa areas.
+                  Since its establishment in 2025, COZY STAY HOKKAIDO has built a strong operational track record backed by more than 1,700 highly rated Airbnb reviews, and currently operates 29 units in the Sapporo and Asahikawa areas.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -107,7 +107,7 @@ export default function EnHomePage() {
                   </svg>
                 </Link>
                 <a
-                  href="https://wfvacations.jp/"
+                  href="https://booking.cozystayhokkaido.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 text-navy-800 text-sm font-medium tracking-wider border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
@@ -185,7 +185,7 @@ export default function EnHomePage() {
             All of our properties can be viewed and booked through our official booking website.
           </p>
           <a
-            href="https://wfvacations.jp/"
+            href="https://booking.cozystayhokkaido.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-white text-sm font-medium tracking-wider hover:bg-gold-600 transition-colors duration-200"

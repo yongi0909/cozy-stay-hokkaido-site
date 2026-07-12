@@ -4,8 +4,8 @@ import HeroSlider from "@/components/HeroSlider";
 import SectionTitle from "@/components/SectionTitle";
 
 const kpis = [
-  { value: "30", unit: "室", label: "運営施設数", note: "グループ合計", subnote: "（北海道26室含む）" },
-  { value: "1,300", unit: "件以上", label: "Airbnbレビュー件数", note: "実績累計", subnote: "" },
+  { value: "33", unit: "室", label: "運営施設数", note: "グループ合計", subnote: "（北海道29室含む）" },
+  { value: "1,700", unit: "件以上", label: "Airbnbレビュー件数", note: "実績累計", subnote: "" },
   { value: "4.98", unit: "/ 5.00", label: "Airbnb平均評価", note: "ゲスト総合評価", subnote: "" },
 ];
 
@@ -26,7 +26,7 @@ const sections = [
     href: "/shukuhaku-shisetsu",
     label: "PROPERTIES",
     title: "宿泊施設一覧",
-    desc: "札幌・旭川エリア全30室の施設一覧",
+    desc: "札幌・旭川エリア全33室の施設一覧",
   },
   {
     href: "/unei-taisei",
@@ -88,7 +88,7 @@ export default function HomePage() {
                   私たちは「ここに帰ってきたくなる宿」を理念に、北海道各地の宿泊施設を一貫して運営・管理しています。予約管理からゲスト対応、清掃管理まで、自社スタッフが責任を持って対応しています。
                 </p>
                 <p>
-                  2025年の設立以来、Airbnbを通じた1,300件以上の高評価レビューに裏付けられた運営実績を積み重ね、現在は札幌・旭川エリアにて26室を運営しています。
+                  2025年の設立以来、Airbnbを通じた1,700件以上の高評価レビューに裏付けられた運営実績を積み重ね、現在は札幌・旭川エリアにて29室を運営しています。
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
                   </svg>
                 </Link>
                 <a
-                  href="https://wfvacations.jp/"
+                  href="https://booking.cozystayhokkaido.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 text-navy-800 text-sm font-medium tracking-wider border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
@@ -180,7 +180,7 @@ export default function HomePage() {
             当社運営の全施設は、公式予約サイトよりご確認・ご予約いただけます。
           </p>
           <a
-            href="https://wfvacations.jp/"
+            href="https://booking.cozystayhokkaido.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-white text-sm font-medium tracking-wider hover:bg-gold-600 transition-colors duration-200"
