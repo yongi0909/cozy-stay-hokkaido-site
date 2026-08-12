@@ -136,7 +136,7 @@ export default function Header() {
                 href="https://booking.cozystayhokkaido.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium tracking-wider text-navy-800 border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium tracking-wider bg-navy-800 text-white border border-navy-700 hover:bg-navy-700 transition-all duration-200"
               >
                 {isEnglish ? "Booking Site" : "宿泊予約サイト"}
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,7 +209,7 @@ export default function Header() {
                   href="https://booking.cozystayhokkaido.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-[2] px-4 py-3.5 text-sm text-center font-medium tracking-wider text-navy-800 border border-navy-700"
+                  className="flex-[2] px-4 py-3.5 text-sm text-center font-medium tracking-wider bg-navy-800 text-white border border-navy-700"
                 >
                   {isEnglish ? "Booking Site ↗" : "宿泊予約サイトへ ↗"}
                 </a>

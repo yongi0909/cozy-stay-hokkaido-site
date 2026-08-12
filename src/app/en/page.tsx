@@ -97,23 +97,26 @@ export default function EnHomePage() {
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="https://booking.cozystayhokkaido.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy-800 text-white text-sm font-medium tracking-wider hover:bg-navy-700 transition-colors duration-200"
+                >
+                  Check Availability & Book
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
                 <Link
                   href="/en/company"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy-800 text-white text-sm font-medium tracking-wider hover:bg-navy-700 transition-colors duration-200"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-navy-800 text-sm font-medium tracking-wider border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
                 >
                   Learn More
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-                <a
-                  href="https://booking.cozystayhokkaido.jp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-navy-800 text-sm font-medium tracking-wider border border-navy-700 hover:bg-navy-800 hover:text-white transition-all duration-200"
-                >
-                  Booking Website ↗
-                </a>
               </div>
             </div>
 
