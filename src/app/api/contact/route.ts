@@ -56,9 +56,9 @@ export async function POST(req: Request) {
       subject,
       message,
       fields: {
-        会社名・組織名: company || "",
-        電話番号: phone || "",
-        お問い合わせ種別: categoryLabel[category] ?? "未選択",
+        "会社名・組織名": company || "",
+        "電話番号": phone || "",
+        "お問い合わせ種別": categoryLabel[category] ?? "未選択",
       },
     });
     if (delivered) return NextResponse.json({ ok: true });
