@@ -1,29 +1,6 @@
 import { NextResponse } from "next/server";
 
 const mailEndpoint = "https://booking.cozystayhokkaido.jp/api/corporate-contact";
-// メッセージ管理アプリ（guest-auto-reply）の受信口。ここへ直接渡すと、フォームに入力されたアドレスが送り主になり、そのまま返信できる
-const inboxEndpoint = process.env.INBOX_FORM_URL || "https://inbox.cozystayhokkaido.jp/api/inbound/form";
-
-/** 受信箱へ直接届ける。合言葉が未設定・失敗したときは false（メールでの転送に切り替える） */
-async function deliverToInbox(payload: Record<string, unknown>): Promise<boolean> {
-  const secret = process.env.FORM_INBOUND_SECRET;
-  if (!secret) return false;
-  try {
-    const res = await fetch(inboxEndpoint, {
-      method: "POST",
-      headers: { Authorization: `Bearer ${secret}`, "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-      redirect: "error",
-      signal: AbortSignal.timeout(15_000),
-    });
-    const json = await res.json().catch(() => null);
-    if (res.ok && json?.ok === true) return true;
-    console.error("Inbox delivery failed", res.status);
-  } catch {
-    console.error("Inbox delivery unavailable");
-  }
-  return false;
-}
 
 export async function POST(req: Request) {
   try {
@@ -47,28 +24,12 @@ export async function POST(req: Request) {
       other: "その他",
     };
 
-    const subject = `【お問い合わせ】${categoryLabel[category] ?? "未選択"} — ${name}`;
-    const delivered = await deliverToInbox({
-      brand: "corporate",
-      id: crypto.randomUUID(),
-      name,
-      email,
-      subject,
-      message,
-      fields: {
-        "会社名・組織名": company || "",
-        "電話番号": phone || "",
-        "お問い合わせ種別": categoryLabel[category] ?? "未選択",
-      },
-    });
-    if (delivered) return NextResponse.json({ ok: true });
-
     const token = process.env.CORPORATE_CONTACT_TOKEN;
     if (!token) throw new Error("Contact delivery is not configured");
 
     const inquiry = {
       replyTo: email,
-      subject,
+      subject: `【お問い合わせ】${categoryLabel[category] ?? "未選択"} — ${name}`,
       text: [
         `■ お名前: ${name}`,
         `■ 会社名・組織名: ${company || "—"}`,
