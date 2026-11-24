@@ -5,8 +5,8 @@ import SectionTitle from "@/components/SectionTitle";
 
 const kpis = [
   { value: "33", unit: " rooms", label: "Properties Operated", note: "Group Total", subnote: "(including 29 units in Hokkaido)" },
-  { value: "1,700", unit: "+", label: "Airbnb Reviews", note: "Cumulative total", subnote: "" },
-  { value: "4.98", unit: " / 5.00", label: "Average Airbnb Rating", note: "Overall guest score", subnote: "" },
+  { value: "2,000", unit: "+", label: "Airbnb Reviews", note: "Cumulative total", subnote: "" },
+  { value: "4.97", unit: " / 5.00", label: "Average Airbnb Rating", note: "Overall guest score", subnote: "" },
 ];
 
 const sections = [
@@ -93,7 +93,7 @@ export default function EnHomePage() {
                   Under our philosophy of creating a place guests want to return to, we consistently operate and manage accommodation facilities across Hokkaido—handling everything from reservation management and guest support to housekeeping, all with our own dedicated staff.
                 </p>
                 <p>
-                  Since its establishment in 2025, COZY STAY HOKKAIDO has built a strong operational track record backed by more than 1,700 highly rated Airbnb reviews, and currently operates 29 units in the Sapporo and Asahikawa areas.
+                  Since its establishment in 2025, COZY STAY HOKKAIDO has built a strong operational track record backed by more than 2,000 highly rated Airbnb reviews, and currently operates 29 units in the Sapporo and Asahikawa areas.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">

@@ -117,10 +117,10 @@ export default function OtoiawasePage() {
                   <div>
                     <p className="text-xs text-gray-400 font-sans mb-0.5 tracking-wide">メールアドレス</p>
                     <a
-                      href="mailto:contact@cozystayhokkaido.jp"
+                      href="mailto:guest@cozystayhokkaido.jp"
                       className="text-navy-800 text-sm font-medium font-sans hover:text-navy-600 transition-colors break-all"
                     >
-                      contact@cozystayhokkaido.jp
+                      guest@cozystayhokkaido.jp
                     </a>
                   </div>
                 </div>

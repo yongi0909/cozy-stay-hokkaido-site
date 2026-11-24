@@ -103,8 +103,8 @@ export default function Footer() {
                 <dd>
                   <a href="tel:011-555-3951" className="hover:text-white transition-colors">011-555-3951</a>
                   <br />
-                  <a href="mailto:contact@cozystayhokkaido.jp" className="hover:text-white transition-colors break-all">
-                    contact@cozystayhokkaido.jp
+                  <a href="mailto:guest@cozystayhokkaido.jp" className="hover:text-white transition-colors break-all">
+                    guest@cozystayhokkaido.jp
                   </a>
                 </dd>
               </div>

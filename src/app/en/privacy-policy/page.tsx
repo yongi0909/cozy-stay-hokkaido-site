@@ -27,7 +27,7 @@ const sections = [
   },
   {
     title: "7. Contact",
-    body: "For inquiries regarding this Privacy Policy, please contact:\n\nEmail: contact@cozystayhokkaido.jp",
+    body: "For inquiries regarding this Privacy Policy, please contact:\n\nEmail: guest@cozystayhokkaido.jp",
   },
 ];
 

@@ -23,7 +23,7 @@ const sections = [
   },
   {
     title: "6. お問い合わせ窓口",
-    body: "個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。\n\nCOZY STAY北海道株式会社\n〒064-0809 北海道札幌市中央区南9条西4丁目3-15-202\nメール: contact@cozystayhokkaido.jp",
+    body: "個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください。\n\nCOZY STAY北海道株式会社\n〒064-0809 北海道札幌市中央区南9条西4丁目3-15-202\nメール: guest@cozystayhokkaido.jp",
   },
   {
     title: "7. 制定・更新",
